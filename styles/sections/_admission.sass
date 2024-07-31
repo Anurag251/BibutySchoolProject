@@ -1,0 +1,373 @@
+@use '../helper/_variables' as *
+@use '../helper/_mixin' as *
+@use '../layout/_layout' as *
+
+.admission-section
+  .title-part
+    padding: 0
+    text-align: center
+    font-weight: 600
+
+    .name
+      margin-bottom: .5rem
+      font-size: 1.8rem
+
+  .admission-form-area
+    padding: 1.5rem
+    background-color: $light
+    border-radius: .4rem
+    box-shadow: 0 0 10px rgba($dark, .1)
+    max-width: 60rem
+    margin: 0 auto
+
+  .form-subtitle
+    font-size: 1rem
+    margin-bottom: 1.3rem
+    text-align: center
+
+  .form-inputs
+    .form-title
+      margin-bottom: 1rem
+      font-size: 1.2rem
+      font-weight: 500
+
+      .required
+        color: #fc0000
+
+    .input-group-title
+      font-size: 1rem
+      font-weight: 500
+      margin-bottom: 1rem
+
+    .form-group
+      margin-bottom: 1rem
+
+      &:nth-last-child(1)
+        margin-bottom: 0
+
+    .input-group
+      &.threeItem
+        @include grid($columns: 1fr 1fr 1fr)
+
+      &.twoItem
+        @include grid($columns: 1fr 1fr)
+
+  .phone-number-box
+    @include flex($justify: stretch)
+    gap: 1rem
+
+    .group
+      margin-bottom: 0
+      max-width: calc( 100% - 8rem )
+      width: 100%
+
+      &:nth-child(1)
+        max-width: 8rem
+        width: 100%
+
+  .custom-select
+    margin-bottom: 2rem
+    @include flex($justify: flex-start)
+    gap: 1rem
+
+    &#schoolVehicleChoosed
+      display: none
+
+    &.twoLine
+      flex-direction: column
+      align-items: flex-start
+
+    h4
+      font-size: 1.1rem
+      font-weight: 500
+
+    ul
+      @include flex($justify: flex-start)
+      flex-wrap: wrap
+      gap: 1rem
+
+      li
+        input[type="radio"]
+          &:checked ~ .button
+            background-color: $pri
+            color: $light
+
+            .box
+              i
+                display: block
+                color: $dark
+
+        .button
+          @include flex($justify: flex-start)
+          gap: .6rem
+          padding: .4rem .6rem
+          background-color: rgba($dark, .05)
+          border-radius: .2rem
+          cursor: pointer
+
+          &:hover
+            background-color: rgba($dark, .1)
+
+          &.active
+            background-color: $pri
+
+            .box
+              i
+                display: block
+
+          .box
+            height: 1rem
+            width: 1rem
+            background-color: $light
+            position: relative
+            border-radius: .2rem
+
+            i
+              position: absolute
+              top: 50%
+              left: 70%
+              transform: translate(-50%, -50%)
+              display: none
+              font-size: 1.4rem
+
+  .custom-map
+    height: 20rem
+    width: 100%
+    margin: 1rem 0 2rem
+    border-radius: .4rem
+
+  .group
+    height: 3rem
+    position: relative
+    margin-bottom: 1.5rem
+
+    .input-icon
+      position: absolute
+      right: 1rem
+      top: 50%
+      transform: translateY(-50%)
+      height: 1.1rem
+      width: 1.1rem
+
+      &.eye-icon
+        cursor: pointer
+
+        &.active
+          &::after
+            height: 0
+
+        &::after
+          content: ''
+          position: absolute
+          left: 50%
+          top: 50%
+          transform: translate(-50%, -50%) rotate(45deg)
+          height: 105%
+          width: 1.5px
+          background-color: $para
+          border-right: 2px solid $light
+          z-index: 2
+          @include trans()
+
+      svg
+        height: 100%
+        width: 100%
+
+    &.fileType
+      border: 1.5px solid #ACACAC
+      border-radius: .4rem
+      padding: .3rem 1rem
+
+    &.active
+      border-color: $sec
+
+      .custom-input
+        padding: 0 !important
+        border: none !important
+        padding-top: .5rem !important
+
+    &.textarea
+      min-height: 6rem
+      height: auto
+
+      .custom-input
+        min-height: 8rem
+        height: 100%
+        max-height: 15rem
+
+      label
+        top: 1.3rem
+
+      textarea
+        resize: vertical
+        min-height: 3.3rem
+
+    &.error
+      border-color: #A00000
+      margin-bottom: 2rem
+
+      label
+        color: #A00000
+
+    &.uploadImageArea
+      height: 11rem
+      width: 10rem
+      border: 1px dashed rgba($dark, .6)
+      border-radius: .3rem
+      cursor: pointer
+      overflow: hidden
+
+      &.active
+        border-style: solid
+
+        .preview-image
+          display: block
+
+        &:hover
+          label
+            opacity: 1
+            color: $light
+            transform: translateY(0)
+            font-size: .8rem
+            font-weight: 400
+
+            &::before
+              display: block
+
+        label
+          opacity: 0
+
+      label
+        text-align: center !important
+        width: 100%
+        height: 100%
+        @include flex($justify: center)
+        flex-direction: column
+
+        &::after
+          display: none
+
+        &::before
+          content: ""
+          @include dark($opacity: .5)
+          z-index: -1
+          display: none
+
+        i
+          font-size: 2rem
+
+    .preview-image
+      @include image()
+      object-fit: contain
+      display: none
+
+    .input-error
+      position: absolute
+      bottom: -1.2rem
+      left: .4rem
+      text-align: left
+      font-size: 12px
+      font-weight: 500
+      color: #A00000
+
+    label
+      position: absolute
+      top: 50%
+      left: .5rem
+      padding: 0 .5rem
+      transform: translateY(-50%)
+      @include fastTrans()
+      pointer-events: none
+      color: lighten($para, 15%)
+      text-transform: uppercase
+      font-size: .9rem
+      letter-spacing: 1px
+      max-width: 90%
+      overflow: hidden
+      text-overflow: ellipsis
+      white-space: nowrap
+
+      &::after
+        content: ''
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+        height: 4px
+        width: 100%
+        background-color: $light
+        z-index: -1
+
+      &.shrink, &.autoActive
+        @include shrinkLabel()
+        color: $sec
+
+    .inner-input
+      width: 100%
+      height: 100%
+
+    textarea
+      resize: vertical
+
+    .custom-input
+      width: 100%
+      height: 100%
+      font-size: 1rem
+      border: 1px solid #ACACAC
+      border-radius: .3rem
+      padding: .5rem 1rem
+      text-align: left
+
+      &#locationInput
+        pointer-events: none
+
+      &.input-map
+        cursor: not-allowed
+        &::placeholder
+          color: rgba($dark, .6)
+
+      &::placeholder
+        color: transparent
+
+      &:focus
+        border-color: $sec
+
+        &::placeholder
+          color: rgba($dark, .6)
+
+      &:focus ~ label
+        @include shrinkLabel()
+        color: $sec
+
+      &.active
+        border-color: $sec
+
+    .custom-input[type='file']
+      opacity: 0
+      padding-top: .2rem
+      border: 1px solid #ACACAC
+      border-radius: .4rem
+      padding: .5rem 1rem
+
+      &.active[type='file']
+        opacity: 1
+
+  .custom-button
+    width: 100%
+    font-weight: 600
+    margin-top: 1rem
+    font-size: 16px
+    @include flex($justify: center)
+    gap: 10px
+    text-align: center
+    padding: .6rem
+
+    img
+      height: 20px
+      width: 20px
+      margin-left: 5px
+      @include trans()
+
+    &:hover
+      img
+        transform: translateX(4px)

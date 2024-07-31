@@ -1,0 +1,297 @@
+@use '../helper/_variables' as *
+@use '../helper/_mixin' as *
+@use '../layout/_layout' as *
+
+.program-section
+  &.program-page
+    .program-list
+      @include grid($columns: 1fr 1fr 1fr 1fr)
+      grid-row-gap: 2rem
+
+  .program-list
+    overflow: hidden
+
+    .swiper
+      height: 100%
+      width: 100%
+      overflow: hidden
+      position: relative
+      padding-bottom: 3rem
+
+      .swiper-pagination
+        .swiper-pagination-bullet
+          height: 7px
+          width: 1rem
+          background-color: $pri
+          border-radius: 1rem
+
+      .slide-button-group
+        position: absolute
+        top: 1rem
+        right: 1rem
+        @include flex($justify: center)
+        gap: .5rem
+        z-index: 10
+
+        .slide-button-next, .slide-button-prev
+          height: 2rem
+          width: 2rem
+          border: 2px solid $pri
+          @include flex($justify: center)
+          border-radius: 50%
+          cursor: pointer
+          background-color: $light
+          @include fastTrans()
+          color: $pri
+
+          &:hover
+            transform: scale(1.1)
+
+          // &.swiper-button-disabled
+          //   opacity: .5
+          //   pointer-events: none
+
+    .program-item
+      .image-area
+        height: 12rem
+        width: 100%
+        overflow: hidden
+        border-radius: .5rem
+
+        img
+          @include image()
+
+      .content
+        position: relative
+        padding: 1.3rem .5rem .5rem
+
+        .fee
+          position: absolute
+          top: 0
+          left: .5rem
+          transform: translateY(-50%)
+          padding: .2rem .8rem
+          background-color: $pri
+          font-size: .8rem
+          color: $light
+          border-radius: 2rem
+
+        h3
+          font-size: 1.1rem
+          font-weight: 600
+          a
+            color: $dark
+
+            &:hover
+              color: $pri
+
+        p
+          font-size: .8rem
+          margin: 1rem 0
+
+        .item-info
+          @include grid($columns: 1fr 1fr 1fr)
+          gap: 0
+          margin-top: 1rem
+          background-color: rgba(var(--prirgb), .1)
+          color: $dark
+          padding: .7rem .3rem
+          border-radius: 1rem
+
+          li
+            text-align: center
+            width: 100%
+
+            &:nth-child(2)
+              border-left: 1px dashed $dark
+              border-right: 1px dashed $dark
+
+            h4
+              font-size: .8rem
+              font-weight: 600
+
+            p
+              font-size: .7rem
+              font-weight: 400
+              margin: 0
+
+        .custom-button
+          padding: .6rem 1rem
+          width: 100%
+          margin-top: 1rem
+
+.program-details-section
+  .inner-program-details
+    @include flex($justify: stretch)
+    align-items: stretch
+    gap: 1rem
+
+    .image
+      max-width: 50%
+      flex: 50%
+      // height: 100%
+      width: 100%
+      overflow: hidden
+      border-radius: 1rem
+
+      img
+        @include image()
+
+    .content
+      max-width: 50%
+      flex: 50%
+      padding: 2rem
+      background-color: rgba(var(--prirgb), .06)
+      border-radius: 1rem
+      box-shadow: 2.5px 2.5px 0px 1px rgba(var(--prirgb), .2)
+      @include trans()
+
+      &:hover
+        box-shadow: 2.5px 2.5px 0px 1px rgba(var(--prirgb), .7)
+
+      h2
+        font-size: 2.6rem
+        margin-bottom: 1rem
+
+      p
+        margin-bottom: 1rem
+        font-size: 1.1rem
+
+      .others
+        margin-top: 2rem
+        position: relative
+        @include flex($justify: space-between)
+        align-items: flex-start
+        flex-wrap: wrap
+        gap: 1rem
+
+        &::after
+          content: ""
+          position: absolute
+          left: 50%
+          top: 0
+          transform: translateX(-50%)
+          height: 100%
+          width: 1px
+          // background-color: $pri
+
+        .teacher-details
+          @include flex($justify: flex-start)
+          align-items: flex-start
+          gap: .5rem
+          // border-right: 1px solid $pri
+
+          .teacher-image
+            height: 4.5rem
+            width: 100%
+            max-width: 4.5rem
+            flex: 4.5rem
+            border-radius: 50%
+            overflow: hidden
+
+            img
+              @include image()
+
+          .info
+            max-width: calc( 100% - 5rem )
+            flex: calc( 100% - 5rem )
+            width: 100%
+
+            h5
+              font-size: 1rem
+              font-weight: 400
+
+            h3
+              font-size: 1.2rem
+              margin-top: .4rem
+              font-weight: 600
+
+        .fee
+          text-align: right
+
+          h5
+            font-size: 1rem
+            font-weight: 400
+
+          h3
+            font-size: 1.2rem
+            margin-top: .4rem
+            font-weight: 600
+
+.program-feature
+  .program-feature-list
+    @include grid($columns: 1fr 1fr 1fr 1fr)
+
+    .item
+      @include flex($justify: center)
+      flex-direction: column
+      gap: 1rem
+      background-color: rgba(var(--prirgb), .06)
+      padding: 1.5rem 1rem
+      border-radius: 1rem
+      box-shadow: 2.5px 2.5px 0px 1px rgba(var(--prirgb), .2)
+      @include trans()
+
+      &:hover
+        box-shadow: 2.5px 2.5px 0px 1px rgba(var(--prirgb), .7)
+
+      .icon
+        height: 5rem
+        width: 5rem
+        border-radius: 50%
+        @include flex($justify: center)
+        background-color: $pri
+
+        img
+          height: 50%
+          width: 50%
+          object-fit: contain
+
+      .content
+        text-align: center
+
+        h3
+          font-size: 1.2rem
+          font-weight: 500
+
+        h5
+          font-size: 1rem
+          font-weight: 400
+          margin-top: .5rem
+
+.table-section
+  .inner-table
+    @include grid($columns: 1fr 1fr)
+
+    .morning, .afternoon
+      width: 100%
+
+      h3
+        font-size: 1.6rem
+        margin-bottom: 1rem
+        font-weight: 500
+        text-transform: uppercase
+        letter-spacing: 3px
+
+      table
+        width: 100%
+        border-radius: 1rem
+        overflow: hidden
+
+        th, td
+          text-align: left
+          padding: 1rem 1.5rem
+
+        th
+          background: $pri
+          color: $light
+          font-size: 1.1rem
+
+        tbody
+          tr
+            &:nth-child(even)
+              td
+                background-color: rgba(var(--prirgb), .2)
+
+            td
+              background-color: rgba(var(--prirgb), .1)

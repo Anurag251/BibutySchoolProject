@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- fancybox -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="./styles/lib/swiper.min.css" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./styles/main.css" />
+
+    <title>School Project</title>
+  </head>
+
+  <body>
+    <!-- Header start -->
+    <div id="colorCode" primaryColor="#A00000" secondaryColor="#744BB6"></div>
+    <header>
+      <div class="header-top">
+        <div class="wrapper">
+          <div class="contact-info">
+            <a href="mailto:info@company.com">info@company.com </a>
+            <a href="tel:98xxxxxx">98xxxxxx</a>
+          </div>
+
+          <!-- Social Media Links -->
+          <ul class="social-links">
+            <li>
+              <!-- facebook links -->
+              <a href="#" title="Facebook" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+
+            <li>
+              <!-- twitter links -->
+              <a href="#" title="Twitter" target="_blank">
+                <i class="fab fa-x-twitter"></i>
+              </a>
+            </li>
+
+            <li>
+              <!-- linkedin links -->
+              <a href="#" title="Linkedin" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+
+            <li>
+              <!-- whatsapp links -->
+              <a href="#" title="Whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </li>
+          </ul>
+
+          <!-- <div class="auth-button">
+            <a href="#">Login</a>
+            <a href="#">Register</a>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <div class="inner-header">
+          <!-- Logo -->
+          <a href="index.html" title="Modern Educere" aria-current="page">
+            <div class="logo">
+              <h1>Modern Educere</h1>
+              <p>Montessori Based School</p>
+            </div>
+          </a>
+
+          <!-- Nav Links -->
+          <nav>
+            <ul class="nav-links">
+              <li class="link">
+                <a href="about.html" title="About us">
+                  <button class="nav-button">About us</button>
+                </a>
+              </li>
+
+              <li class="link">
+                <a href="program.html" title="Program">
+                  <button class="nav-button">Program</button>
+                </a>
+              </li>
+
+              <li class="link">
+                <a href="gallery.html" title="Gallery">
+                  <button class="nav-button">Gallery</button>
+                </a>
+              </li>
+
+              <li class="link">
+                <a href="calendar.html" title="Calendar">
+                  <button class="nav-button">Calendar</button>
+                </a>
+              </li>
+
+              <li class="link">
+                <a href="food-menu.html" title="Food Menu">
+                  <button class="nav-button">Food Menu</button>
+                </a>
+              </li>
+
+              <li class="link">
+                <a href="contact.html" title="Contacts">
+                  <button class="nav-button">Contacts</button>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="admission-button">
+            <a href="admission.html" title="Admission Open">
+              <button>Admission Open</button>
+            </a>
+          </div>
+
+          <button
+            class="search-button circle-buttton"
+            title="Search"
+            role="open-menu"
+          >
+            <i class="fas fa-search"></i>
+          </button>
+
+          <!-- side nav button -->
+          <button class="side-nav-button" title="Open Menu" role="open-menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- Header end -->
+
+    <!-- side menu start -->
+    <div class="side-nav">
+      <div class="side-nav-bg"></div>
+
+      <div class="side-nav-inner">
+        <button class="side-nav-close" role="close-menu" title="Close Menu">
+          <i class="fas fa-times"></i>
+        </button>
+
+        <div class="nav-logo-sec">
+          <!-- Logo -->
+          <a href="/" title="Modern Educere" aria-current="page">
+            <div class="logo">
+              <h1>Modern Educere</h1>
+              <p>Montessori Based School</p>
+            </div>
+          </a>
+
+          <!-- Nav Links -->
+          <nav>
+            <ul class="nav-links">
+              <li class="link">
+                <a href="about.html" title="About us">
+                  <button class="nav-button">About us</button>
+                </a>
+              </li>
+
+              <li class="link">
+                <a href="program.html" title="Program">
+                  <button class="nav-button">Program</button>
+                </a>
+              </li>
+
+              <li class="link">
+                <a href="gallery.html" title="Gallery">
+                  <button class="nav-button">Gallery</button>
+                </a>
+              </li>
+
+              <li class="link">
+                <a href="calendar.html" title="Calendar">
+                  <button class="nav-button">Calendar</button>
+                </a>
+              </li>
+
+              <li class="link">
+                <a href="food-menu.html" title="Food Menu">
+                  <button class="nav-button">Food Menu</button>
+                </a>
+              </li>
+
+              <li class="link">
+                <a href="contact.html" title="Contacts">
+                  <button class="nav-button">Contacts</button>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="contact-info">
+          <a href="mailto:moderneducere@gmail.com">
+            <button>
+              <i class="fas fa-envelope"></i> moderneducere@gmail.com
+            </button>
+          </a>
+          <a href="tel:+9779851230113">
+            <button><i class="fas fa-mobile-alt"></i> +977-9851230113</button>
+          </a>
+
+          <a href="tel:01-4650662">
+            <button><i class="fas fa-phone"></i> 01-4650662</button>
+          </a>
+        </div>
+
+        <!-- Social Media Links -->
+        <ul class="social-links">
+          <li>
+            <!-- facebook links -->
+            <a href="#" title="Facebook" target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+
+          <li>
+            <!-- twitter links -->
+            <a href="#" title="Twitter" target="_blank">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+          </li>
+
+          <li>
+            <!-- linkedin links -->
+            <a href="#" title="Linkedin" target="_blank">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </li>
+
+          <li>
+            <!-- whatsapp links -->
+            <a href="#" title="Whatsapp" target="_blank">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- side menu end -->
+
+    <!-- page title start -->
+    <div class="page-title-section">
+      <img
+        class="page-title-section-image"
+        src="./assets/images/banner-static-bg.jpeg"
+        alt=""
+      />
+      <div class="page-title">
+        <!-- Breadcrumb -->
+        <h5>Home . School Visit</h5>
+
+        <!-- page title -->
+        <h2>School Visit</h2>
+      </div>
+    </div>
+    <!-- page title end -->
+
+    <!-- School-visit start -->
+    <section class="school-visit-section" id="aboutPageSection">
+      <hr />
+
+      <div class="wrapper">
+        <div class="inner-school-visit">
+          <div class="content">
+            <!-- School-visit Paragraph -->
+            <div class="school-visit-message">
+              <h2>Namaste!</h2>
+              <p>
+                We know how important it is for you to choose the right school
+                for your child. We would like to invite you to visit our school
+                to meet our staff, students and to experience our dynamic
+                environment. Please contact us to schedule your visit. We would
+                be happy to assist you!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- School-visit end -->
+
+    <!-- Contact start -->
+    <section class="contact-section school-visit-map" id="contactSection">
+      <div class="wrapper">
+        <div class="contact">
+          <div class="contact-area">
+            <div class="contact-map">
+              <!-- google map -->
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.0627455270637!2d85.33885787517242!3d27.746210623776854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb194e8fd10771%3A0x741759dc29c4a56!2sMODERN%20EDUCERE!5e0!3m2!1sen!2snp!4v1705380687741!5m2!1sen!2snp"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact end -->
+
+    <!-- Footer start -->
+    <footer>
+      <div class="wrapper">
+        <div class="footer-inner">
+          <div class="footer-item">
+            <div class="footer-about">
+              <!-- Footer logo -->
+              <a href="/">
+                <div class="logo">
+                  <h1>Modern Educere</h1>
+                  <p>Montessori Based School</p>
+                </div>
+              </a>
+
+              <div class="short-about-school">
+                <!-- short description about school -->
+                <p>
+                  At Modern Educere we, teachers and staff, are committed to
+                  providing a joyful environment where learning is at the
+                  student’s pace...
+                </p>
+              </div>
+
+              <div class="footer-social-media">
+                <!-- School social links -->
+                <ul class="social-links">
+                  <li>
+                    <a href="#" title="Facebook">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" title="Twitter">
+                      <i class="fab fa-x-twitter"></i>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" title="Instagram">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" title="Linked in">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-item">
+            <div class="footer-title">Quick links</div>
+
+            <!-- quick links -->
+            <ul class="footer-links">
+              <li>
+                <a href="about.html">About</a>
+              </li>
+              <li>
+                <a href="about.html#principalSection">Message from principal</a>
+              </li>
+              <li>
+                <a href="program.html">Program</a>
+              </li>
+              <li>
+                <a href="about.html#testimonialsSection">Parents comment</a>
+              </li>
+              <li>
+                <a href="gallery.html">Gallery</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-item">
+            <div class="footer-title">Customer Service</div>
+
+            <!-- Services -->
+            <ul class="footer-links">
+              <li>
+                <a href="admission.html">Admission</a>
+              </li>
+              <li>
+                <a href="calendar.html">Calendar</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact</a>
+              </li>
+              <li>
+                <a href="food-menu.html">Food menu</a>
+              </li>
+              <li>
+                <a href="school-visit.html">School visit</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-item">
+            <div class="footer-title">Contact Us</div>
+
+            <ul class="footer-links">
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <!-- address -->
+                Ganeshdev Marg, Bansbari Rd, Kathmandu
+              </li>
+
+              <li>
+                <i class="fas fa-phone"></i>
+                <!-- contact number -->
+                <a href="tel:98xxxxxx">98xxxxxx</a>
+              </li>
+
+              <li>
+                <i class="fas fa-envelope"></i>
+                <!-- email address -->
+                <a href="mailto:info@company.com">info@company.com</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <!-- copyright -->
+          <h5>© Copyright 2024 Modern Educere | Power by Sherpa Tech</h5>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer end -->
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- fancybox -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <!-- swiper -->
+    <script src="./js/swiper.min.js"></script>
+
+    <!-- js -->
+    <script src="./js/scripts.js"></script>
+
+    <script>
+      Fancybox.bind("[data-fancybox]");
+
+      var swiper = new Swiper(".event-section .mySwiper", {
+        spaceBetween: 20,
+        slidesPerView: 1,
+        speed: 600,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".slide-button-next",
+          prevEl: ".slide-button-prev",
+        },
+        breakpoints: {
+          340: {
+            slidesPerView: 2,
+          },
+          600: {
+            slidesPerView: 3,
+          },
+          800: {
+            slidesPerView: 2,
+          },
+          1100: {
+            slidesPerView: 4,
+          },
+        },
+      });
+
+      var swiper = new Swiper(".program-section .mySwiper", {
+        spaceBetween: 20,
+        slidesPerView: 1,
+        speed: 600,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".slide-button-next",
+          prevEl: ".slide-button-prev",
+        },
+        breakpoints: {
+          340: {
+            slidesPerView: 2,
+          },
+          600: {
+            slidesPerView: 3,
+          },
+          800: {
+            slidesPerView: 2,
+          },
+          1100: {
+            slidesPerView: 4,
+          },
+        },
+      });
+
+      var swiper = new Swiper(".banner-section .mySwiper", {
+        spaceBetween: 0,
+        slidesPerView: 1,
+        speed: 600,
+
+        navigation: {
+          nextEl: ".slide-button-next",
+          prevEl: ".slide-button-prev",
+        },
+      });
+
+      var swiper = new Swiper(".testimonials-area .mySwiper", {
+        spaceBetween: 20,
+        slidesPerView: 1,
+        speed: 600,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".slide-button-next",
+          prevEl: ".slide-button-prev",
+        },
+      });
+
+      var swiper = new Swiper(".affiliations-list .mySwiper", {
+        spaceBetween: 10,
+        slidesPerView: 1,
+        speed: 600,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".slide-button-next",
+          prevEl: ".slide-button-prev",
+        },
+        breakpoints: {
+          340: {
+            slidesPerView: 2,
+          },
+          600: {
+            slidesPerView: 3,
+          },
+          800: {
+            slidesPerView: 2,
+          },
+          1100: {
+            slidesPerView: 4,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

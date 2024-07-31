@@ -1,0 +1,305 @@
+@use '../helper/_variables' as *
+@use '../helper/_mixin' as *
+@use '../layout/_layout' as *
+
+.testimonials-section
+  .wrapper
+    max-width: 1700px
+    padding: 0
+
+  .inner-testimonials
+    @include flex($justify: stretch)
+    align-items: stretch
+    height: 100%
+
+    .testimonials-video-area
+      flex: 50%
+      max-width: 50%
+      position: relative
+      @include bgImage()
+      @include flex($justify: center)
+
+      &::after
+        content: ""
+        @include dark($opacity: .3)
+        z-index: 1
+
+      @keyframes ringGrow
+        0%
+          transform: translate(-50%, -50%) scale(1)
+          opacity: 1
+
+        100%
+          transform: translate(-50%, -50%) scale(2.6)
+          opacity: 0
+
+      .video-play-button
+        position: relative
+        height: 5rem
+        width: 5rem
+        border-radius: 50%
+        border: 3px solid $light
+        color: $light
+        cursor: pointer
+        font-size: 2rem
+        z-index: 2
+        transition: .4s
+
+        &:hover
+          color: $pri
+          border-color: $pri
+
+          &::before, &::after
+            animation-duration: 1s
+
+          &::after
+            animation-delay: .2s
+
+        &::before, &::after
+          content: ""
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+          border: 1px solid $light
+          border-radius: 50%
+          height: 100%
+          width: 100%
+          animation: ringGrow 2s ease-in-out infinite
+          pointer-events: none
+          z-index: -1
+
+        &::after
+          animation-delay: .5s
+
+    .testimonials-area
+      flex: calc( 100% - 50% )
+      max-width: calc( 100% - 50% )
+      padding: 3rem
+      height: 100%
+      @include flex($justify: center)
+      align-items: flex-start
+      flex-direction: column
+      position: relative
+      background-color: $sec
+      color: $light
+
+      &::after
+        content: ""
+        position: absolute
+        left: 0
+        top: 0
+        height: 100%
+        width: 100%
+        background-image: url(../assets/images/banner-static-bg.jpeg)
+        opacity: .09
+
+      .testimonials-title
+        margin-bottom: 2rem
+
+        h2
+          font-size: 3rem
+
+      .swiper
+        width: 100%
+        overflow: hidden
+        position: relative
+        padding-bottom: 2rem
+
+        .swiper-pagination
+          @include flex($justify: flex-start)
+
+          .swiper-pagination-bullet
+            height: 7px
+            width: 1rem
+            border: 1px solid $light
+            background-color: rgba(var(--prirgb), .8)
+            border-radius: 1rem
+            opacity: 1
+
+            &.swiper-pagination-bullet-active
+              background-color: $light
+
+        .slide-button-group
+          position: absolute
+          top: 1rem
+          right: 1rem
+          @include flex($justify: center)
+          gap: .5rem
+          z-index: 10
+
+          .slide-button-next, .slide-button-prev
+            height: 2rem
+            width: 2rem
+            border: 2px solid rgba($light, .8)
+            @include flex($justify: center)
+            border-radius: 50%
+            cursor: pointer
+            background-color: $sec
+            @include fastTrans()
+            color: rgba($light, .8)
+
+            &:hover
+              transform: scale(1.1)
+
+            &.swiper-button-disabled
+              opacity: .5
+              pointer-events: none
+
+      .testimonial-item
+        .ratings
+          margin-top: .5rem
+          color: #ffde25
+          font-size: 1.3rem
+
+        .testimonial-user-profile
+          @include flex($justify: flsx-start)
+          flex-wrap: wrap
+          gap: 1rem
+
+          .user-image
+            height: 4rem
+            width: 4rem
+            border-radius: 50%
+            overflow: hidden
+
+            img
+              @include image()
+
+          .user-info
+            padding-top: .3rem
+
+            h3
+              font-size: 1.15rem
+              font-weight: 600
+
+            h6
+              font-weight: 400
+              font-size: .8rem
+
+        .testimonial-message
+          margin: 2.5rem 0
+          position: relative
+
+          .icon
+            position: absolute
+            left: 0
+            top: -1.5rem
+            height: 2.5rem
+            width: 2.5rem
+
+            &.rotate-icon
+              top: auto
+              left: auto
+              right: 0
+              bottom: -1.5rem
+              transform: rotate(180deg)
+
+            svg
+              height: 100%
+              width: 100%
+
+              path
+                fill: $pri
+
+          p
+            font-size: 1.1rem
+            text-align: justify
+
+.video-popup
+  position: fixed
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  padding: 1rem
+  z-index: 100
+  @include flex($justify: center)
+  pointer-events: none
+
+  &.active
+    pointer-events: auto
+
+    .popup-bg
+      opacity: 1
+
+    .popup-box
+      opacity: 1
+      transform: scale(1)
+
+  .popup-bg
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    right: 0
+    background-color: rgba($dark, .6)
+    backdrop-filter: blur(10px)
+    opacity: 0
+    z-index: 1
+    transition: .4s
+
+  .popup-box
+    max-width: 50rem
+    width: 100%
+    height: 30rem
+    background-color: $light
+    box-shadow: 0 0 10px rgba($dark, .1)
+    padding: 1rem
+    border-radius: 1rem
+    position: relative
+    z-index: 2
+    transform: scale(1.1)
+    opacity: 0
+    transition: .4s
+
+    .popup-close
+      position: absolute
+      right: 0
+      top: -2.5rem
+      height: 2rem
+      width: 2rem
+      border-radius: 50%
+      background-color: rgba($light, .8)
+      @include flex($justify: center)
+      color: #a00000
+      cursor: pointer
+
+      &:hover
+        background-color: rgba($light, 1)
+
+      i
+        font-size: 1.2rem
+
+    .popup-container
+      height: 100%
+      @include flex($justify: stretch)
+      align-items: flex-start
+      gap: 1rem
+
+      @keyframes videoLoader
+        0%
+          transform: translate(-50%, -50%) rotate(0)
+
+        100%
+          transform: translate(-50%, -50%) rotate(360deg)
+
+      .loader
+        height: 3rem
+        width: 3rem
+        border-radius: 50%
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        border: 4px solid $pri
+        border-left-color: $light
+        border-right-color: $light
+        animation: videoLoader 1s infinite
+        z-index: 1
+
+      iframe
+        position: relative
+        z-index: 2
+        height: 100%
+        width: 100%

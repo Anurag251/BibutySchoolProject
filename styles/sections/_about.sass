@@ -1,0 +1,298 @@
+@use '../helper/_variables' as *
+@use '../helper/_mixin' as *
+@use '../layout/_layout' as *
+
+.about-section
+  overflow: hidden
+
+  .inner-about
+    // background-image: linear-gradient(90deg, $pri, $sec)
+    border-radius: 1.1rem
+    color: $dark
+    @include grid($columns: 1fr 1fr)
+    gap: 2rem
+    height: 100%
+    align-items: center
+
+    .content
+      .about-title-area
+        h1
+          font-size: 3.5rem
+          font-weight: 700
+          margin-bottom: 1rem
+          line-height: 110%
+
+      h2
+        font-size: 1.6rem
+        font-weight: 600
+
+      h3
+        font-size: 1.2rem
+
+      p
+        line-height: 170%
+        font-size: 1rem
+        margin-bottom: 1rem
+
+      .more-details
+        @include grid($columns: 1fr 1fr)
+        margin-bottom: 1rem
+
+        li
+          @include flex($justify: flex-start)
+          gap: .5rem
+
+          .icon
+            height: 5rem
+            width: 5rem
+            object-fit: contain
+
+          h4
+            font-size: 1.2rem
+            font-weight: 500
+
+      .book-button
+        padding: .6rem 2rem
+        margin-top: 1rem
+
+    .image-area
+      height: 100%
+      width: 100%
+      position: relative
+      @include flex($justify: center)
+
+      &::before
+        content: ""
+        position: absolute
+        left: 47%
+        top: 50%
+        transform: translate(-50%, -50%)
+        height: 32rem
+        width: 32rem
+        border-radius: 50%
+        border: 3px solid $pri
+        z-index: 1
+        transition: .4s
+        z-index: 1
+
+      &::after
+        content: ""
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        border: 1.3rem solid $light
+        height: 17rem
+        width: 17rem
+        border-radius: 50%
+        z-index: 2
+
+      .icon
+        height: 17rem
+        width: 17rem
+        object-fit: contain
+        position: absolute
+        left: 105%
+        top: 0
+        transform: translate(-50%)
+
+      .about-image
+        position: relative
+        height: 32rem
+        width: 32rem
+        border-radius: 50%
+        object-fit: contain
+        z-index: 2
+
+      .trusted-by
+        position: absolute
+        top: 64%
+        left: 0%
+        z-index: 3
+        height: 11rem
+        width: 11rem
+        border-radius: 50%
+        @include flex($justify: center)
+        flex-direction: column
+        background-color: $light
+        text-align: center
+        box-shadow: 0 4px 10px rgba($dark, .1)
+
+        &::after
+          content: ""
+          position: absolute
+          left: 50%
+          top: 50%
+          transform: translate(-50%, -50%)
+          height: 80%
+          width: 80%
+          border-radius: 50%
+          border: 1px dashed rgba($dark, .3)
+
+        h5
+          font-size: .85rem
+          text-transform: uppercase
+          font-weight: 600
+          letter-spacing: 2px
+          color: $para
+
+        h3
+          font-size: 1.9rem
+          font-weight: 400
+          color: $pri
+          line-height: 90%
+          margin-top: .5rem
+
+.about-page-section, .school-visit-section
+  overflow: hidden
+
+  .inner-about-page, .inner-school-visit
+    // background-image: linear-gradient(90deg, $pri, $sec)
+    border-radius: 1.1rem
+    color: $dark
+    gap: 2rem
+    height: 100%
+    align-items: center
+    text-align: center
+
+    .content
+      .about-page-title-area
+        max-width: 800px
+        margin: 0 auto
+
+        h1
+          font-size: 3.5rem
+          font-weight: 700
+          margin-bottom: 1rem
+          line-height: 110%
+
+      .about-message, .school-visit-message
+        max-width: 800px
+        margin: 0 auto
+
+      h2
+        font-size: 1.6rem
+        font-weight: 600
+
+      h3
+        font-size: 1.2rem
+
+      p
+        line-height: 170%
+        font-size: 1.1rem
+        margin-bottom: 1rem
+
+      .book-button
+        padding: .6rem 2rem
+        margin-top: 1rem
+
+    .image-area
+      height: 100%
+      width: 100%
+      position: relative
+      @include grid($columns: 1fr 1fr)
+      margin: 2rem 0
+
+      .image
+        height: 20rem
+        width: 100%
+
+        img
+          @include image()
+
+      .about-page-image
+        position: relative
+        height: 32rem
+        width: 32rem
+        border-radius: 50%
+        object-fit: contain
+        z-index: 2
+
+      .ratings
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        z-index: 3
+        height: 11rem
+        width: 18rem
+        @include flex($justify: center)
+        flex-direction: column
+        background-color: $light
+        text-align: center
+        box-shadow: 0 4px 10px rgba($dark, .1)
+
+        h5
+          font-size: 2rem
+          text-transform: uppercase
+          font-weight: 400
+          letter-spacing: 2px
+          line-height: 100%
+
+        .stars
+          margin: .4rem 0
+          font-size: 1.4rem
+          color: $pri
+
+        p
+          font-size: 1.2rem
+          font-weight: 400
+          line-height: 90%
+          margin-top: .5rem
+          color: $para
+
+.teacher-section
+  .teacher-list
+    @include grid($columns: 1fr 1fr 1fr 1fr)
+
+    .item
+      position: relative
+      border-radius: 1rem
+      overflow: hidden
+
+      &:hover
+        .teacher-info
+          bottom: 0
+
+      .image
+        height: 22rem
+        width: 100%
+
+        img
+          @include image()
+
+      .teacher-info
+        position: absolute
+        z-index: 2
+        bottom: 0
+        text-align: center
+        width: 100%
+        border-radius: 1rem
+        background-color: rgba(var(--secrgb), .8)
+        backdrop-filter: blur(4px)
+        color: $light
+        padding-bottom: .5rem
+        @include trans()
+
+        h3
+          font-size: 1.2rem
+          font-weight: 600
+          margin-top: 1rem
+
+        h5
+          font-size: .8rem
+          font-weight: 400
+          margin-top: .2rem
+
+        .social-links
+          margin-top: 1rem
+          @include flex($justify: center)
+          gap: .5rem
+          background-color: $pri
+          display: none
+
+          i
+            height: 2rem
+            width: 2rem
+            @include flex($justify: center)
+            color: $light

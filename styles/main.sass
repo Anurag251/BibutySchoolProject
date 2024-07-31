@@ -1,0 +1,303 @@
+@use './helper/_variables' as *
+@use './helper/_mixin' as *
+@use './layout/_layout' as *
+
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap')
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: 'Poppins', sans-serif
+  border: none
+  outline: none
+  background: none
+  text-decoration: none
+  list-style: none
+  scroll-behavior: smooth !important
+
+:root
+  --pri: #00BF63
+  --sec: #022c46
+  --prirgb: #00BF63
+  --secrgb: #022c46
+  --swiper-theme-color: #00BF63
+
+body
+  scroll-behavior: smooth !important
+
+section
+  padding-top: 6rem
+
+p
+  font-size: .9rem
+  line-height: 170%
+
+/***********      wrapper      ***********/
+.wrapper
+  max-width: 1200px
+  margin: 0 auto
+  padding: 0 1.3rem
+
+  &.noSpace
+    max-width: auto
+    padding: 0
+
+/***********      book-button      ***********/
+.book-button, .button-more, .submit-button
+  padding: .8rem 1.7rem
+  border-radius: 3rem
+  border: 2px solid transparent
+  color: $light
+  font-weight: 600
+  font-size: .9rem
+  margin-top: 1rem
+  cursor: pointer
+  position: relative
+  overflow: hidden
+  @include trans()
+
+  &.button-border
+    border-color: $pri
+    color: $pri
+
+    &::after
+      top: 0
+      height: 0
+
+    &:hover
+      color: $light
+      border-color: transparent
+
+      &::after
+        height: 100%
+
+  &::after
+    content: ""
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    height: 100%
+    background-image: linear-gradient(90deg, $pri, $sec)
+    @include trans()
+    z-index: 1
+
+  &:hover
+    color: $pri
+    border-color: $pri
+
+    &::after
+      height: 0
+
+  &.button-dark
+    &:hover
+      color: $light
+      border-color: $light
+
+  span
+    position: relative
+    z-index: 2
+
+.custom-button
+  padding: 1rem 2rem
+  background-color: $pri
+  color: $light
+  font-weight: 600
+  font-size: 1rem
+  cursor: pointer
+  border-radius: .4rem
+  border: 1px solid $pri
+
+  &:hover
+    background-color: $light
+    color: $pri
+
+.circle-buttton
+  height: 3rem
+  width: 3rem
+  position: relative
+  cursor: pointer
+
+  &.opp
+    &::after
+      left: 62%
+
+  &:hover
+    &::after
+      left: 50%
+
+  &::after
+    content: ""
+    position: absolute
+    left: 38%
+    top: 50%
+    transform: translate(-50%, -50%)
+    height: 97%
+    width: 97%
+    border-radius: 50%
+    border: 1px solid $pri
+    z-index: 1
+    transition: .4s
+
+  i
+    color: $light
+    font-size: 1.1rem
+    @include flex($justify: center)
+    background-color: $pri
+    height: 100%
+    width: 100%
+    border-radius: 50%
+    position: relative
+    z-index: 2
+
+/***********      title      ***********/
+.section-title
+  text-align: center
+  padding: 5rem 0
+  margin-bottom: 4rem
+  position: relative
+  background-color: $sec
+
+  &::after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    background-image: url(../assets/images/banner-static-bg.jpeg)
+    opacity: 0.08
+    z-index: 1
+
+  h2
+    position: relative
+    color: $light
+    font-size: 3rem
+    z-index: 2
+
+.page-title-section
+  position: relative
+  height: 18rem
+  @include bgImage()
+  background: $sec !important
+
+  .page-title-section-image
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    @include image()
+    opacity: .08
+    z-index: 1
+
+  .page-title
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+    color: $light
+    z-index: 2
+    text-align: center
+    width: 100%
+    padding: 0 .5rem
+
+    h5
+      font-size: 1.4rem
+      margin-bottom: 1.5rem
+      font-weight: 400
+      a
+        color: $light
+
+        &:hover
+          color: $pri
+
+    h2
+      font-size: 5.5rem
+      line-height: 3.8rem
+      text-transform: uppercase
+
+.admission-open-button
+  position: fixed
+  bottom: 6rem
+  right: -4rem
+  transform: rotate(-90deg)
+  z-index: 1000
+
+  button
+    padding: .5rem 1rem
+    color: $light
+    background-color: $pri
+    cursor: pointer
+    font-size: 1rem
+    box-shadow: 0 0 10px rgba($dark, .3)
+    border-radius: .4rem
+
+    &:hover
+      background-color: $sec
+
+$loader-size: 100px
+$loader-color: var(--pri)
+
+.loading-body
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 100vh
+  margin: 0
+  background-color: #ecf0f1
+
+.loader-container
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: $dark
+  display: flex
+  align-items: center
+  justify-content: center
+  z-index: 9999
+
+  #percentage
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    color: $light
+    font-size: 1.2rem
+    font-weight: 500
+
+  .loader
+    border: 5px solid $loader-color
+    border-radius: 50%
+    border-top: 5px solid transparent
+    width: $loader-size
+    height: $loader-size
+    animation: spin 1s linear infinite
+
+@keyframes spin
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+
+div
+
+@import './sections/_header'
+@import './sections/_banner'
+@import './sections/_about'
+@import './sections/_gallery'
+@import './sections/_testimonials'
+@import './sections/_contact'
+@import './sections/_footer'
+@import './sections/_program'
+@import './sections/_event'
+@import './sections/_principal'
+@import './sections/_food-menu'
+@import './sections/_admission'
+@import './sections/_insta'
+@import './layout/_responsive'

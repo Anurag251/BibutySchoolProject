@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- fancybox -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+
+    <!-- leaflet map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="./styles/lib/swiper.min.css" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./styles/main.css" />
+
+    <title>School Project</title>
+  </head>
+
+  <body>
+    <!-- Header start -->
+    <div id="colorCode" primaryColor="#A00000" secondaryColor="#744BB6"></div>
+    <header>
+      <div class="header-top">
+        <div class="wrapper">
+          <div class="contact-info">
+            <a href="mailto:info@company.com">info@company.com </a>
+            <a href="tel:98xxxxxx">98xxxxxx</a>
+          </div>
+
+          <!-- Social Media Links -->
+          <ul class="social-links">
+            <li>
+              <!-- facebook links -->
+              <a href="#" title="Facebook" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+
+            <li>
+              <!-- twitter links -->
+              <a href="#" title="Twitter" target="_blank">
+                <i class="fab fa-x-twitter"></i>
+              </a>
+            </li>
+
+            <li>
+              <!-- linkedin links -->
+              <a href="#" title="Linkedin" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+
+            <li>
+              <!-- whatsapp links -->
+              <a href="#" title="Whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </li>
+          </ul>
+
+          <!-- <div class="auth-button">
+            <a href="#">Login</a>
+            <a href="#">Register</a>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <div class="inner-header">
+          <!-- Logo -->
+          <a href="index.html" title="Modern Educere" aria-current="page">
+            <div class="logo">
+              <h1>Modern Educere</h1>
+              <p>Montessori Based School</p>
+            </div>
+          </a>
+
+          <!-- Nav Links -->
+          <nav>
+            <ul class="nav-links">
+              <li class="link">
+                <a href="about.html" title="About us">
+                  <button class="nav-button">About us</button>
+                </a>
+              </li>
+
+              <li class="link">
+                <a href="program.html" title="Program">
+                  <button class="nav-button">Program</button>
+                </a>
+              </li>
+
+              <li class="link">
+                <a href="gallery.html" title="Gallery">
+                  <button class="nav-button">Gallery</button>
+                </a>
+              </li>
+
+              <li class="link">
+                <a href="calendar.html" title="Calendar">
+                  <button class="nav-button">Calendar</button>
+                </a>
+              </li>
+
+              <li class="link">
+                <a href="food-menu.html" title="Food Menu">
+                  <button class="nav-button">Food Menu</button>
+                </a>
+              </li>
+
+              <li class="link">
+                <a href="contact.html" title="Contacts">
+                  <button class="nav-button">Contacts</button>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="admission-button">
+            <a href="admission.html" title="Admission Open">
+              <button>Admission Open</button>
+            </a>
+          </div>
+
+          <button
+            class="search-button circle-buttton"
+            title="Search"
+            role="open-menu"
+          >
+            <i class="fas fa-search"></i>
+          </button>
+
+          <!-- side nav button -->
+          <button class="side-nav-button" title="Open Menu" role="open-menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- Header end -->
+
+    <!-- side menu start -->
+    <div class="side-nav">
+      <div class="side-nav-bg"></div>
+
+      <div class="side-nav-inner">
+        <button class="side-nav-close" role="close-menu" title="Close Menu">
+          <i class="fas fa-times"></i>
+        </button>
+
+        <div class="nav-logo-sec">
+          <!-- Logo -->
+          <a href="/" title="Modern Educere" aria-current="page">
+            <div class="logo">
+              <h1>Modern Educere</h1>
+              <p>Montessori Based School</p>
+            </div>
+          </a>
+
+          <!-- Nav Links -->
+          <nav>
+            <ul class="nav-links">
+              <li class="link">
+                <a href="about.html" title="About us">
+                  <button class="nav-button">About us</button>
+                </a>
+              </li>
+
+              <li class="link">
+                <a href="program.html" title="Program">
+                  <button class="nav-button">Program</button>
+                </a>
+              </li>
+
+              <li class="link">
+                <a href="gallery.html" title="Gallery">
+                  <button class="nav-button">Gallery</button>
+                </a>
+              </li>
+
+              <li class="link">
+                <a href="calendar.html" title="Calendar">
+                  <button class="nav-button">Calendar</button>
+                </a>
+              </li>
+
+              <li class="link">
+                <a href="food-menu.html" title="Food Menu">
+                  <button class="nav-button">Food Menu</button>
+                </a>
+              </li>
+
+              <li class="link">
+                <a href="contact.html" title="Contacts">
+                  <button class="nav-button">Contacts</button>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="contact-info">
+          <a href="mailto:moderneducere@gmail.com">
+            <button>
+              <i class="fas fa-envelope"></i> moderneducere@gmail.com
+            </button>
+          </a>
+          <a href="tel:+9779851230113">
+            <button><i class="fas fa-mobile-alt"></i> +977-9851230113</button>
+          </a>
+
+          <a href="tel:01-4650662">
+            <button><i class="fas fa-phone"></i> 01-4650662</button>
+          </a>
+        </div>
+
+        <!-- Social Media Links -->
+        <ul class="social-links">
+          <li>
+            <!-- facebook links -->
+            <a href="#" title="Facebook" target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+
+          <li>
+            <!-- twitter links -->
+            <a href="#" title="Twitter" target="_blank">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+          </li>
+
+          <li>
+            <!-- linkedin links -->
+            <a href="#" title="Linkedin" target="_blank">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </li>
+
+          <li>
+            <!-- whatsapp links -->
+            <a href="#" title="Whatsapp" target="_blank">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- side menu end -->
+
+    <!-- page title start -->
+    <div class="page-title-section">
+      <img
+        class="page-title-section-image"
+        src="./assets/images/banner-static-bg.jpeg"
+        alt=""
+      />
+      <div class="page-title">
+        <!-- Breadcrumb -->
+        <h5>Home . Admission</h5>
+
+        <!-- page title -->
+        <h2>Admission</h2>
+      </div>
+    </div>
+    <!-- page title end -->
+
+    <!-- admission start -->
+    <section class="admission-section">
+      <div class="wrapper">
+        <div class="admission-form-area">
+          <div class="inner-form">
+            <div class="title-part no-bg">
+              <!-- form title -->
+              <div class="name">REGISTRATION FORM</div>
+            </div>
+
+            <!-- form sub title  -->
+            <p class="form-subtitle">To be completed by Parent / Guardian.</p>
+            <div class="form">
+              <form>
+                <div class="form-inputs">
+                  <div class="form-group">
+                    <!-- form section title -->
+                    <h3 class="form-title">Candidate's Personal Details</h3>
+
+                    <div class="input-group">
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="fullName"
+                            id="fullName"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="fullName">
+                            Name of the Child:
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+                    </div>
+
+                    <div class="input-group twoItem">
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="date"
+                            class="custom-input"
+                            name="dob"
+                            id="dob"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label shrink" for="dob">
+                            Date of birth (DOB):
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+
+                      <div class="custom-select">
+                        <h4>Gender:</h4>
+                        <ul>
+                          <li>
+                            <input
+                              class="radioButton"
+                              type="radio"
+                              id="Male"
+                              name="Gender"
+                              value="Male"
+                              hidden
+                            />
+
+                            <label for="Male" class="button">
+                              <div class="box">
+                                <i class="fas fa-check"></i>
+                              </div>
+                              Male
+                            </label>
+                          </li>
+
+                          <li>
+                            <input
+                              class="radioButton"
+                              type="radio"
+                              id="Female"
+                              name="Gender"
+                              value="Female"
+                              hidden
+                            />
+
+                            <label for="Female" class="button">
+                              <div class="box">
+                                <i class="fas fa-check"></i>
+                              </div>
+                              Female
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="input-group">
+                      <div class="group textarea">
+                        <div class="inner-input">
+                          <textarea
+                            class="custom-input"
+                            name="previousSchool"
+                            id="previousSchool"
+                            onchange="getData(this)"
+                          ></textarea>
+
+                          <label class="form-input-label" for="previousSchool">
+                            Particulars of previous school(s) attended and till
+                            which grade:
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+
+                      <div class="group textarea">
+                        <div class="inner-input">
+                          <textarea
+                            class="custom-input"
+                            name="brotherSister"
+                            id="brotherSister"
+                            onchange="getData(this)"
+                          ></textarea>
+
+                          <label class="form-input-label" for="brotherSister">
+                            Brother(s) and sister(s) [Name and date of birth]:
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="language"
+                            id="language"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="language">
+                            Language(s) spoken at home:
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="heightWeight"
+                            id="heightWeight"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="heightWeight">
+                            Height and weight at the time of admission:
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+                    </div>
+
+                    <div class="group uploadImageArea" id="UploadPhoto">
+                      <div class="inner-input">
+                        <input
+                          onchange="getData(this)"
+                          type="file"
+                          class="custom-input"
+                          name="forPhoto"
+                          id="forPhoto"
+                          hidden
+                        />
+
+                        <img class="preview-image" src="" alt="" />
+
+                        <label class="form-input-label" for="forPhoto">
+                          <i class="fas fa-cloud-arrow-up"></i>
+                          <br />
+                          Click to upload
+
+                          <br />
+                          Student Photo
+                        </label>
+                      </div>
+                      <p class="input-error">something went wrong</p>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <!-- form section title -->
+                    <div class="form-title">Family information:</div>
+
+                    <div class="input-group twoItem">
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="fatherName"
+                            id="fatherName"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="fatherName">
+                            Father’s Name
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="fatherNationality"
+                            id="fatherNationality"
+                            onchange="getData(this)"
+                          />
+
+                          <label
+                            class="form-input-label"
+                            for="fatherNationality"
+                          >
+                            Nationality
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+                    </div>
+
+                    <div class="input-group twoItem">
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="motherName"
+                            id="motherName"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="motherName">
+                            Mother’s Name
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="motherNationality"
+                            id="motherNationality"
+                            onchange="getData(this)"
+                          />
+
+                          <label
+                            class="form-input-label"
+                            for="motherNationality"
+                          >
+                            Nationality
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+                    </div>
+
+                    <h4 class="input-group-title">Father:</h4>
+
+                    <div class="input-group">
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="fatherWorkAddress"
+                            id="fatherWorkAddress"
+                            onchange="getData(this)"
+                          />
+
+                          <label
+                            class="form-input-label"
+                            for="fatherWorkAddress"
+                          >
+                            Work Address <small>(Father)</small>
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+                    </div>
+
+                    <div class="input-group twoItem">
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="fatherPhone"
+                            id="fatherPhone"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="fatherPhone">
+                            Phone
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="fatherEmail"
+                            id="fatherEmail"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="fatherEmail">
+                            E-mail
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+                    </div>
+
+                    <h4 class="input-group-title">Mother:</h4>
+
+                    <div class="input-group">
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="motherWorkAddress"
+                            id="motherWorkAddress"
+                            onchange="getData(this)"
+                          />
+
+                          <label
+                            class="form-input-label"
+                            for="motherWorkAddress"
+                          >
+                            Work Address <small>(Mother)</small>
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+                    </div>
+
+                    <div class="input-group twoItem">
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="motherEmail"
+                            id="motherEmail"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="motherEmail">
+                            E-mail
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="motherPhone"
+                            id="motherPhone"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="motherPhone">
+                            Phone
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+                    </div>
+
+                    <h4 class="input-group-title">Residential Address:</h4>
+
+                    <div class="input-group">
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="homeAddress"
+                            id="homeAddress"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="homeAddress">
+                            Home Address
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+                    </div>
+
+                    <h4 class="input-group-title">
+                      Guardian’s information (in case parents are not available
+                      or are absent)
+                    </h4>
+
+                    <div class="input-group">
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="guardiansName"
+                            id="guardiansName"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="guardiansName">
+                            Guardian’s Name
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+                    </div>
+
+                    <div class="input-group twoItem">
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="GuardianPhoneNumber"
+                            id="GuardianPhoneNumber"
+                            onchange="getData(this)"
+                          />
+
+                          <label
+                            class="form-input-label"
+                            for="GuardianPhoneNumber"
+                          >
+                            Guardian’s Phone Number
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <!-- form section title -->
+                    <div class="form-title">
+                      Special Medical instructions regarding your child (if
+                      any):
+                    </div>
+                    <div class="input-group">
+                      <div class="group textarea">
+                        <div class="inner-input">
+                          <textarea
+                            class="custom-input"
+                            name="specialMedical"
+                            id="specialMedical"
+                            onchange="getData(this)"
+                          ></textarea>
+
+                          <label class="form-input-label" for="specialMedical">
+                            Describe here
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="custom-select" id="schoolVehicle">
+                    <h4>Do you want to use the school vehicale?</h4>
+
+                    <ul>
+                      <li id="schoolVehicleYesButton">
+                        <input
+                          class="radioButton"
+                          type="radio"
+                          id="schoolVehicleYes"
+                          name="schoolVehicle"
+                          hidden
+                        />
+
+                        <label for="schoolVehicleYes" class="button">
+                          <div class="box">
+                            <i class="fas fa-check"></i>
+                          </div>
+                          Yes
+                        </label>
+                      </li>
+
+                      <li id="schoolVehicleNoButton">
+                        <input
+                          class="radioButton"
+                          type="radio"
+                          id="schoolVehicleNo"
+                          name="schoolVehicle"
+                          hidden
+                        />
+
+                        <label for="schoolVehicleNo" class="button">
+                          <div class="box">
+                            <i class="fas fa-check"></i>
+                          </div>
+                          NO
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="custom-select" id="schoolVehicleChoosed">
+                    <h4>If Yes</h4>
+
+                    <ul>
+                      <li>
+                        <input
+                          class="radioButton"
+                          type="radio"
+                          id="oneWay"
+                          name="schoolVehicleYes"
+                          hidden
+                        />
+
+                        <label for="oneWay" class="button">
+                          <div class="box">
+                            <i class="fas fa-check"></i>
+                          </div>
+                          One way
+                        </label>
+                      </li>
+
+                      <li>
+                        <input
+                          class="radioButton"
+                          type="radio"
+                          id="bothWays"
+                          name="schoolVehicleYes"
+                          hidden
+                        />
+
+                        <label for="bothWays" class="button">
+                          <div class="box">
+                            <i class="fas fa-check"></i>
+                          </div>
+                          Both ways
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="form-group">
+                    <!-- form section title -->
+                    <div class="form-title">Mark your house on map:</div>
+                    <div id="map" class="custom-map"></div>
+                    <div class="input-group">
+                      <div class="group textarea">
+                        <div class="inner-input">
+                          <textarea
+                            class="custom-input input-map"
+                            name="locationInput"
+                            id="locationInput"
+                            onchange="getData(this)"
+                            placeholder="Choose your location on map"
+                            disabled
+                          ></textarea>
+
+                          <label
+                            class="form-input-label shrink"
+                            for="locationInput"
+                          >
+                            House Location Map:
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- form submit CTA -->
+                <button class="custom-button">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- admission end -->
+
+    <!-- Footer start -->
+    <footer>
+      <div class="wrapper">
+        <div class="footer-inner">
+          <div class="footer-item">
+            <div class="footer-about">
+              <!-- Footer logo -->
+              <a href="/">
+                <div class="logo">
+                  <h1>Modern Educere</h1>
+                  <p>Montessori Based School</p>
+                </div>
+              </a>
+
+              <div class="short-about-school">
+                <!-- short description about school -->
+                <p>
+                  At Modern Educere we, teachers and staff, are committed to
+                  providing a joyful environment where learning is at the
+                  student’s pace...
+                </p>
+              </div>
+
+              <div class="footer-social-media">
+                <!-- School social links -->
+                <ul class="social-links">
+                  <li>
+                    <a href="#" title="Facebook">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" title="Twitter">
+                      <i class="fab fa-x-twitter"></i>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" title="Instagram">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" title="Linked in">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-item">
+            <div class="footer-title">Quick links</div>
+
+            <!-- quick links -->
+            <ul class="footer-links">
+              <li>
+                <a href="about.html">About</a>
+              </li>
+              <li>
+                <a href="about.html#principalSection">Message from principal</a>
+              </li>
+              <li>
+                <a href="program.html">Program</a>
+              </li>
+              <li>
+                <a href="about.html#testimonialsSection">Parents comment</a>
+              </li>
+              <li>
+                <a href="gallery.html">Gallery</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-item">
+            <div class="footer-title">Customer Service</div>
+
+            <!-- Services -->
+            <ul class="footer-links">
+              <li>
+                <a href="admission.html">Admission</a>
+              </li>
+              <li>
+                <a href="calendar.html">Calendar</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact</a>
+              </li>
+              <li>
+                <a href="food-menu.html">Food menu</a>
+              </li>
+              <li>
+                <a href="school-visit.html">School visit</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-item">
+            <div class="footer-title">Contact Us</div>
+
+            <ul class="footer-links">
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <!-- address -->
+                Ganeshdev Marg, Bansbari Rd, Kathmandu
+              </li>
+
+              <li>
+                <i class="fas fa-phone"></i>
+                <!-- contact number -->
+                <a href="tel:98xxxxxx">98xxxxxx</a>
+              </li>
+
+              <li>
+                <i class="fas fa-envelope"></i>
+                <!-- email address -->
+                <a href="mailto:info@company.com">info@company.com</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <!-- copyright -->
+          <h5>© Copyright 2024 Modern Educere | Power by Sherpa Tech</h5>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer end -->
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- fancybox -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <!-- swiper -->
+    <script src="./js/swiper.min.js"></script>
+
+    <!-- leaflet map -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- js -->
+    <script src="./js/scripts.js"></script>
+
+    <script>
+      var map = L.map("map").setView([27.7172, 85.324], 13);
+
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: "© OpenStreetMap contributors",
+      }).addTo(map);
+
+      var marker;
+
+      // Event listener for the map click
+      map.on("click", function (e) {
+        // Remove existing marker, if any
+        if (marker) {
+          map.removeLayer(marker);
+        }
+
+        // Add a new marker at the clicked location
+        marker = L.marker(e.latlng).addTo(map);
+
+        // Reverse geocoding to get the address from coordinates
+        fetch(
+          `https://nominatim.openstreetmap.org/reverse?format=json&lat=${e.latlng.lat}&lon=${e.latlng.lng}`
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            // Update the input field with the address
+            document.getElementById("locationInput").value = data.display_name;
+          });
+      });
+    </script>
+
+    <script>
+      Fancybox.bind("[data-fancybox]");
+
+      var swiper = new Swiper(".event-section .mySwiper", {
+        spaceBetween: 20,
+        slidesPerView: 1,
+        speed: 600,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".slide-button-next",
+          prevEl: ".slide-button-prev",
+        },
+        breakpoints: {
+          340: {
+            slidesPerView: 2,
+          },
+          600: {
+            slidesPerView: 3,
+          },
+          800: {
+            slidesPerView: 2,
+          },
+          1100: {
+            slidesPerView: 4,
+          },
+        },
+      });
+
+      var swiper = new Swiper(".program-section .mySwiper", {
+        spaceBetween: 20,
+        slidesPerView: 1,
+        speed: 600,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".slide-button-next",
+          prevEl: ".slide-button-prev",
+        },
+        breakpoints: {
+          340: {
+            slidesPerView: 2,
+          },
+          600: {
+            slidesPerView: 3,
+          },
+          800: {
+            slidesPerView: 2,
+          },
+          1100: {
+            slidesPerView: 4,
+          },
+        },
+      });
+
+      var swiper = new Swiper(".banner-section .mySwiper", {
+        spaceBetween: 0,
+        slidesPerView: 1,
+        speed: 600,
+
+        navigation: {
+          nextEl: ".slide-button-next",
+          prevEl: ".slide-button-prev",
+        },
+      });
+
+      var swiper = new Swiper(".testimonials-area .mySwiper", {
+        spaceBetween: 20,
+        slidesPerView: 1,
+        speed: 600,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".slide-button-next",
+          prevEl: ".slide-button-prev",
+        },
+      });
+
+      var swiper = new Swiper(".affiliations-list .mySwiper", {
+        spaceBetween: 10,
+        slidesPerView: 1,
+        speed: 600,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".slide-button-next",
+          prevEl: ".slide-button-prev",
+        },
+        breakpoints: {
+          340: {
+            slidesPerView: 2,
+          },
+          600: {
+            slidesPerView: 3,
+          },
+          800: {
+            slidesPerView: 2,
+          },
+          1100: {
+            slidesPerView: 4,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

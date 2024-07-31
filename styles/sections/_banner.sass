@@ -1,0 +1,236 @@
+@use '../helper/_variables' as *
+@use '../helper/_mixin' as *
+@use '../layout/_layout' as *
+
+.banner-section
+  position: relative
+  background-color: $pri
+  padding: 0
+  overflow: hidden
+
+  &::after
+    content: ""
+    position: absolute
+    left: 0
+    top: 0
+    height: 100%
+    width: 100%
+    background-image: url(../assets/images/banner-static-bg.jpeg)
+    opacity: .08
+
+  @keyframes floatingObj1
+    0%
+      left: 6rem
+      top: 9rem
+
+    100%
+      left: 9rem
+      top: 6rem
+
+  @keyframes floatingObj2
+    0%
+      left: 65%
+      top: 20%
+
+    100%
+      left: 60%
+      top: 15%
+
+  @keyframes floatingObj3
+    0%
+      transform: translate(-50%, -50%) rotateX(0) rotateY(0)
+
+    50%
+      transform: translate(-50%, -50%) rotateX(360deg) rotateY(0)
+
+    100%
+      transform: translate(-50%, -50%) rotateX(360deg) rotateY(360deg)
+
+  .floating-obj1
+    position: absolute
+    left: 9rem
+    top: 9rem
+    height: 8rem
+    width: 8rem
+    border-radius: 50%
+    background-color: #1888C9
+    animation: floatingObj1 4s ease-in-out infinite alternate
+
+  .floating-obj2
+    position: absolute
+    left: 60%
+    top: 20%
+    transform: translate(-50%, -50%)
+    height: 3rem
+    width: 3rem
+    border-radius: 50%
+    background-color: #7C4BC0
+    animation: floatingObj2 4s ease-in-out infinite alternate
+
+  .floating-obj3
+    position: absolute
+    left: 58%
+    top: 80%
+    transform: translate(-50%, -50%)
+    height: 7rem
+    width: 7rem
+    border-radius: 50%
+    border: 1.6rem solid #32A9BA
+    animation: floatingObj3 6s ease-in-out infinite
+
+  .slide-button-group
+    position: absolute
+    bottom: 1rem
+    left: 0
+    width: 100%
+    @include flex($justify: space-between)
+    padding: 0 2rem
+    gap: .5rem
+    z-index: 10
+
+    .slide-button-next, .slide-button-prev
+      height: 4rem
+      width: 4rem
+
+      &::after
+        border-color: $light
+      i
+        background-color: $light
+        color: $pri
+        font-size: 1.5rem
+
+      &.swiper-button-disabled
+        opacity: .5
+        pointer-events: none
+
+  .swiper
+    width: 100%
+    height: 100%
+
+  .swiper-slide, .swiper-wrapper
+    height: 100%
+    width: 100%
+    @include flex($justify: center)
+    align-items: flex-end
+
+  .swiper-slide-active
+    .inner-banner
+      .content
+        h1, h2, h3
+          transform: translateY(0) scale(1)
+          filter: blur(0)
+          opacity: 1
+
+        p
+          transform: translateY(0) scale(1)
+          filter: blur(0)
+          opacity: 1
+
+        .custom-button
+          opacity: 1
+          transform: scale(1)
+
+      .image-area
+        .person-image, .person-bg
+          opacity: 1
+          filter: blur(0)
+
+        .person-bg
+          transform: translateX(-50%) scale(1)
+
+  .inner-banner
+    // background-image: linear-gradient(90deg, $pri, $sec)
+    border-radius: 1.1rem
+    color: $light
+    @include grid($columns: 1.5fr 1fr)
+    align-items: center
+    position: relative
+    height: 100%
+    // min-height: 23rem
+    z-index: 2
+
+    .content
+      position: relative
+      z-index: 2
+      padding: 10rem 0
+
+      h1, h2, h3
+        font-size: 6.4rem
+        font-weight: 800
+        text-transform: uppercase
+        margin-bottom: 1.5rem
+        line-height: 90%
+        color: $light
+        text-shadow: 0 2px 8px rgba($dark, .4)
+        @include trans()
+        transform: translateY(-14px) scale(1.3)
+        filter: blur(10px)
+        transition-delay: .3s
+        opacity: 0
+
+      h2
+        font-size: 2.5rem
+
+      h3
+        font-size: 1.7rem
+
+      p
+        line-height: 130%
+        font-size: 3rem
+        margin-bottom: 1rem
+        color: $light
+        font-family: 'Satisfy', cursive
+        text-decoration: underline
+        text-transform: lowercase
+        @include trans()
+        transform: translateY(14px) scale(1.3)
+        filter: blur(10px)
+        transition-delay: .6s
+        opacity: 0
+
+      .custom-button
+        margin-top: 1rem
+        opacity: 0
+        transform: scale(1.4)
+        @include trans()
+        transition-delay: .7s
+        background-color: $light
+        color: $pri
+
+        &:hover
+          background-color: $sec
+          color: $light
+
+    .image-area
+      position: relative
+      height: 100%
+      width: 100%
+      z-index: 1
+      @include flex($justify: center)
+      align-items: flex-end
+
+      .person-bg
+        position: absolute
+        left: 50%
+        transform: translateX(-50%) scale(1.5)
+        top: 3rem
+        height: 35rem
+        width: 35rem
+        object-fit: contain
+        z-index: 1
+        @include trans()
+        opacity: 0
+        transition-delay: .8s
+        filter: blur(4px)
+
+      .person-image
+        max-height: 40rem
+        height: 100%
+        width: 100%
+        object-fit: contain
+        object-position: bottom
+        z-index: 2
+        opacity: 0
+        transition: 2s
+        transition-delay: 1s
+        filter: blur(4px)

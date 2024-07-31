@@ -1,0 +1,72 @@
+@use '../helper/_variables' as *
+@use '../helper/_mixin' as *
+@use '../layout/_layout' as *
+
+.contact-section
+  &.school-visit-map
+    padding-top: 1rem
+    .contact
+      .contact-area
+        grid-template-columns: 1fr
+
+        .contact-map
+          height: 30rem
+
+  .contact
+    .contact-area
+      @include grid($columns: 1fr 1fr)
+
+      .contact-map
+        height: 100%
+        width: 100%
+        border: 1px solid rgba($dark, .2)
+        border-radius: 1rem
+        overflow: hidden
+
+        iframe
+          height: 100%
+          width: 100%
+
+      .contact-form
+        padding: 2rem
+        border: 1px solid rgba($dark, .2)
+        border-radius: 1rem
+
+        .contact-title
+          font-size: 1.5rem
+          margin-bottom: 1.5rem
+          font-weight: 600
+
+        .input-group
+          @include grid($columns: 1fr 1fr)
+          margin-bottom: 1rem
+
+        .group
+          label
+            font-size: 1rem
+
+            span
+              color: #A00000
+
+          .input-error
+            font-size: .8rem
+            color: #A00000
+            padding: 0 .3rem
+
+          input, textarea, select
+            height: 3rem
+            width: 100%
+            border: 1px solid rgba($dark, .2)
+            border-radius: .6rem
+            margin: .5rem 0 .2rem
+            padding: .5rem .7rem
+            font-size: 1rem
+
+          textarea
+            height: auto
+            max-height: 12rem
+            resize: vertical
+
+        .custom-button
+          border-radius: .5rem
+          margin-top: 1rem
