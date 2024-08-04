@@ -1,0 +1,436 @@
+@use '../helper/_variables' as *
+@use '../helper/_mixin' as *
+@use '../layout/_layout' as *
+
+.news-feed
+  background-color: #f5f5f5
+  display: flex
+  align-items: flex-start
+
+  .side-nav
+    max-width: 20rem
+    width: 100%
+    height: 100svh
+    position: sticky
+    top: 0
+
+    .side-nav-inner
+      width: 100%
+      background-color: $light
+      box-shadow: none
+      border-right: 1px solid rgba($dark, .2)
+
+  .news-feed-area
+    max-width: calc( 100% - 20rem )
+    width: 100%
+    display: flex
+    justify-content: flex-start
+    gap: 1rem
+
+    .news-feed-left
+      max-width: calc( 100% - 20rem )
+      width: 100%
+
+    .post-button-area
+      position: sticky
+      top: 0
+      z-index: 2
+      padding: 1rem
+      background-color: #f5f5f5
+
+    .post-button
+      @include flex($justify: space-between)
+      padding: .6rem 1rem .6rem .6rem
+      border: 1px solid rgba($dark, .2)
+      border-radius: .8rem
+      background-color: $light
+      gap: 2rem
+
+      .placeholder
+        @include flex($justify: flex-start)
+        gap: .5rem
+        cursor: pointer
+        width: 100%
+
+        img
+          height: 2rem
+          width: 2rem
+          border-radius: 50%
+          object-fit: cover
+
+        p
+          font-size: .85rem
+          color: lighten($dark, 20%)
+
+      .button-group
+        @include flex($justify: flex-end)
+        gap: 1rem
+
+        button
+          font-size: 1.1rem
+          cursor: pointer
+
+    .all-post
+      padding: 1rem
+
+      .post
+        padding: 1rem
+        border-radius: .8rem
+        margin-bottom: 1.5rem
+        background-color: $light
+        border: 1px solid rgba($dark, .2)
+
+        .post-header
+          @include flex($justify: space-between)
+          margin-bottom: 1rem
+
+          .profile
+            @include flex($justify: flex-start)
+            gap: .7rem
+
+            .profile-image
+              height: 2.5rem
+              width: 2.5rem
+              position: relative
+
+              &::after
+                content: ""
+                height: .6rem
+                width: .6rem
+                border-radius: 50%
+                position: absolute
+                border: 2px solid $light
+                bottom: -.1rem
+                right: -.1rem
+                background-color: #00a113
+
+            img
+              @include image()
+              border-radius: 50%
+
+            .info
+              h3
+                font-size: 1rem
+                font-weight: 600
+                color: $dark
+
+              p
+                font-size: .8rem
+                color: lighten($dark, 20%)
+
+          .more-options
+            position: relative
+
+          .more
+            cursor: pointer
+            height: 2.6rem
+            width: 2.6rem
+            border-radius: 50%
+            @include flex($justify: center)
+
+            &:hover
+              .options
+                opacity: 1
+                pointer-events: auto
+                top: 1.8rem
+
+            i
+              font-size: 1.2rem
+
+            &:hover
+              background-color: rgba($dark, .07)
+
+            .options
+              position: absolute
+              top: .2rem
+              right: -1rem
+              width: 15.5rem
+              padding: 1rem
+              opacity: 0
+              pointer-events: none
+              @include trans()
+              z-index: 10
+
+              ul
+                border-radius: .3rem
+                padding: .5rem
+                background-color: #ffffff
+                box-shadow: 0 0 10px rgba($dark, .1)
+
+                li
+                  border-radius: .3rem
+
+                  button
+                    color: $dark
+                    padding: .8rem .5rem
+                    font-size: .875rem
+                    cursor: pointer
+                    border-radius: .3rem
+                    text-align: left
+                    @include flex($justify: flex-start)
+                    width: 100%
+                    gap: .8rem
+
+                    &:hover
+                      background-color: rgba($dark, .06)
+
+                    i
+                      font-size: 1.1rem
+
+        .post-body
+          p
+            font-size: .9rem
+            color: $dark
+            margin-bottom: .5rem
+
+          img
+            width: 100%
+            border-radius: .5rem
+
+        .post-footer
+          margin-top: .5rem
+
+          .button-group
+            padding: 0 .5rem
+            border-top: 1px solid rgba($dark, .2)
+            border-bottom: 1px solid rgba($dark, .2)
+            @include flex($justify: space-between)
+            gap: 1rem
+
+            .left-group
+              @include flex($justify: flex-start)
+              gap: 1rem
+
+            .right-group
+              @include flex($justify: flex-end)
+              gap: 1rem
+
+            button
+              font-size: 1.1rem
+              cursor: pointer
+
+          .counter
+            @include flex($justify: space-between)
+            margin-top: 1rem
+
+            .likes-count
+              p
+                font-weight: 600
+
+            .comment-report-count
+              @include flex($justify: flex-end)
+              gap: 1rem
+
+              p
+                color: lighten($dark, 20%)
+
+          svg
+            cursor: pointer
+            overflow: visible
+            width: 2.1rem
+            height: 2.1rem
+            transform: scale(1.2) translateY(.1rem)
+
+            #heart
+              transform-origin: center
+              animation: animateHeartOut 0.3s linear forwards
+
+            #main-circ
+              transform-origin: 29.5px 29.5px
+
+          #checkbox
+            display: none
+
+          #checkbox:checked + label svg
+            #heart
+              transform: scale(0.2)
+              fill: #e2264d
+              animation: animateHeart 0.3s linear forwards 0.25s
+
+            #main-circ
+              transition: all 2s
+              animation: animateCircle 0.3s linear forwards
+              opacity: 1
+
+            #grp1
+              opacity: 1
+              transition: 0.1s all 0.3s
+
+              #oval1
+                transform: scale(0) translate(0, -30px)
+                transform-origin: 0 0 0
+                transition: 0.5s transform 0.3s
+
+              #oval2
+                transform: scale(0) translate(10px, -50px)
+                transform-origin: 0 0 0
+                transition: 1.5s transform 0.3s
+
+            #grp2
+              opacity: 1
+              transition: 0.1s all 0.3s
+
+              #oval1
+                transform: scale(0) translate(30px, -15px)
+                transform-origin: 0 0 0
+                transition: 0.5s transform 0.3s
+
+              #oval2
+                transform: scale(0) translate(60px, -15px)
+                transform-origin: 0 0 0
+                transition: 1.5s transform 0.3s
+
+            #grp3
+              opacity: 1
+              transition: 0.1s all 0.3s
+
+              #oval1
+                transform: scale(0) translate(30px, 0px)
+                transform-origin: 0 0 0
+                transition: 0.5s transform 0.3s
+
+              #oval2
+                transform: scale(0) translate(60px, 10px)
+                transform-origin: 0 0 0
+                transition: 1.5s transform 0.3s
+
+            #grp4
+              opacity: 1
+              transition: 0.1s all 0.3s
+
+              #oval1
+                transform: scale(0) translate(30px, 15px)
+                transform-origin: 0 0 0
+                transition: 0.5s transform 0.3s
+
+              #oval2
+                transform: scale(0) translate(40px, 50px)
+                transform-origin: 0 0 0
+                transition: 1.5s transform 0.3s
+
+            #grp5
+              opacity: 1
+              transition: 0.1s all 0.3s
+
+              #oval1
+                transform: scale(0) translate(-10px, 20px)
+                transform-origin: 0 0 0
+                transition: 0.5s transform 0.3s
+
+              #oval2
+                transform: scale(0) translate(-60px, 30px)
+                transform-origin: 0 0 0
+                transition: 1.5s transform 0.3s
+
+            #grp6
+              opacity: 1
+              transition: 0.1s all 0.3s
+
+              #oval1
+                transform: scale(0) translate(-30px, 0px)
+                transform-origin: 0 0 0
+                transition: 0.5s transform 0.3s
+
+              #oval2
+                transform: scale(0) translate(-60px, -5px)
+                transform-origin: 0 0 0
+                transition: 1.5s transform 0.3s
+
+            #grp7
+              opacity: 1
+              transition: 0.1s all 0.3s
+
+              #oval1
+                transform: scale(0) translate(-30px, -15px)
+                transform-origin: 0 0 0
+                transition: 0.5s transform 0.3s
+
+              #oval2
+                transform: scale(0) translate(-55px, -30px)
+                transform-origin: 0 0 0
+                transition: 1.5s transform 0.3s
+
+            #grp2
+              opacity: 1
+              transition: 0.1s opacity 0.3s
+
+            #grp3
+              opacity: 1
+              transition: 0.1s opacity 0.3s
+
+            #grp4
+              opacity: 1
+              transition: 0.1s opacity 0.3s
+
+            #grp5
+              opacity: 1
+              transition: 0.1s opacity 0.3s
+
+            #grp6
+              opacity: 1
+              transition: 0.1s opacity 0.3s
+
+            #grp7
+              opacity: 1
+              transition: 0.1s opacity 0.3s
+
+          @keyframes animateCircle
+            40%
+              transform: scale(10)
+              opacity: 1
+              fill: #dd4688
+
+            55%
+              transform: scale(11)
+              opacity: 1
+              fill: #d46abf
+
+            65%
+              transform: scale(12)
+              opacity: 1
+              fill: #cc8ef5
+
+            75%
+              transform: scale(13)
+              opacity: 1
+              fill: transparent
+              stroke: #cc8ef5
+              stroke-width: 0.5
+
+            85%
+              transform: scale(17)
+              opacity: 1
+              fill: transparent
+              stroke: #cc8ef5
+              stroke-width: 0.2
+
+            95%
+              transform: scale(18)
+              opacity: 1
+              fill: transparent
+              stroke: #cc8ef5
+              stroke-width: 0.1
+
+            100%
+              transform: scale(19)
+              opacity: 1
+              fill: transparent
+              stroke: #cc8ef5
+              stroke-width: 0
+
+          @keyframes animateHeart
+            0%
+              transform: scale(0.2)
+
+            40%
+              transform: scale(1.2)
+
+            100%
+              transform: scale(1)
+
+          @keyframes animateHeartOut
+            0%
+              transform: scale(1.4)
+
+            100%
+              transform: scale(1)

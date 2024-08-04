@@ -3039,49 +3039,53 @@ footer .copyright h5 {
   transform: translateX(4px);
 }
 
-.insta-feed {
-  background-color: rgba(31, 31, 31, 0.05);
+.news-feed {
+  background-color: #f5f5f5;
   display: flex;
   align-items: flex-start;
 }
-.insta-feed .side-nav {
+.news-feed .side-nav {
   max-width: 20rem;
   width: 100%;
   height: 100svh;
   position: sticky;
   top: 0;
 }
-.insta-feed .side-nav .side-nav-inner {
+.news-feed .side-nav .side-nav-inner {
   width: 100%;
   background-color: #FFFFFF;
   box-shadow: none;
   border-right: 1px solid rgba(31, 31, 31, 0.2);
 }
-.insta-feed .insta-feed-area {
+.news-feed .news-feed-area {
   max-width: calc(100% - 20rem);
   width: 100%;
-  padding: 1rem;
   display: flex;
   justify-content: flex-start;
   gap: 1rem;
 }
-.insta-feed .insta-feed-area .insta-feed-left {
+.news-feed .news-feed-area .news-feed-left {
   max-width: calc(100% - 20rem);
   width: 100%;
 }
-.insta-feed .insta-feed-area .post-button {
+.news-feed .news-feed-area .post-button-area {
   position: sticky;
-  top: 1rem;
+  top: 0;
+  z-index: 2;
+  padding: 1rem;
+  background-color: #f5f5f5;
+}
+.news-feed .news-feed-area .post-button {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.6rem 1rem 0.6rem 0.6rem;
   border: 1px solid rgba(31, 31, 31, 0.2);
-  border-radius: 0.4rem;
+  border-radius: 0.8rem;
   background-color: #FFFFFF;
   gap: 2rem;
 }
-.insta-feed .insta-feed-area .post-button .placeholder {
+.news-feed .news-feed-area .post-button .placeholder {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -3089,54 +3093,54 @@ footer .copyright h5 {
   cursor: pointer;
   width: 100%;
 }
-.insta-feed .insta-feed-area .post-button .placeholder img {
+.news-feed .news-feed-area .post-button .placeholder img {
   height: 2rem;
   width: 2rem;
   border-radius: 50%;
   object-fit: cover;
 }
-.insta-feed .insta-feed-area .post-button .placeholder p {
+.news-feed .news-feed-area .post-button .placeholder p {
   font-size: 0.85rem;
   color: #525252;
 }
-.insta-feed .insta-feed-area .post-button .button-group {
+.news-feed .news-feed-area .post-button .button-group {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 1rem;
 }
-.insta-feed .insta-feed-area .post-button .button-group button {
+.news-feed .news-feed-area .post-button .button-group button {
   font-size: 1.1rem;
   cursor: pointer;
 }
-.insta-feed .insta-feed-area .all-post {
-  margin-top: 1rem;
-}
-.insta-feed .insta-feed-area .all-post .post {
+.news-feed .news-feed-area .all-post {
   padding: 1rem;
-  border-radius: 1rem;
+}
+.news-feed .news-feed-area .all-post .post {
+  padding: 1rem;
+  border-radius: 0.8rem;
   margin-bottom: 1.5rem;
   background-color: #FFFFFF;
   border: 1px solid rgba(31, 31, 31, 0.2);
 }
-.insta-feed .insta-feed-area .all-post .post .post-header {
+.news-feed .news-feed-area .all-post .post .post-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
 }
-.insta-feed .insta-feed-area .all-post .post .post-header .profile {
+.news-feed .news-feed-area .all-post .post .post-header .profile {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 0.7rem;
 }
-.insta-feed .insta-feed-area .all-post .post .post-header .profile .profile-image {
+.news-feed .news-feed-area .all-post .post .post-header .profile .profile-image {
   height: 2.5rem;
   width: 2.5rem;
   position: relative;
 }
-.insta-feed .insta-feed-area .all-post .post .post-header .profile .profile-image::after {
+.news-feed .news-feed-area .all-post .post .post-header .profile .profile-image::after {
   content: "";
   height: 0.6rem;
   width: 0.6rem;
@@ -3147,22 +3151,25 @@ footer .copyright h5 {
   right: -0.1rem;
   background-color: #00a113;
 }
-.insta-feed .insta-feed-area .all-post .post .post-header .profile img {
+.news-feed .news-feed-area .all-post .post .post-header .profile img {
   height: 100%;
   width: 100%;
   object-fit: cover;
   border-radius: 50%;
 }
-.insta-feed .insta-feed-area .all-post .post .post-header .profile .info h3 {
+.news-feed .news-feed-area .all-post .post .post-header .profile .info h3 {
   font-size: 1rem;
   font-weight: 600;
   color: #1F1F1F;
 }
-.insta-feed .insta-feed-area .all-post .post .post-header .profile .info p {
+.news-feed .news-feed-area .all-post .post .post-header .profile .info p {
   font-size: 0.8rem;
   color: #525252;
 }
-.insta-feed .insta-feed-area .all-post .post .post-header .more {
+.news-feed .news-feed-area .all-post .post .post-header .more-options {
+  position: relative;
+}
+.news-feed .news-feed-area .all-post .post .post-header .more {
   cursor: pointer;
   height: 2.6rem;
   width: 2.6rem;
@@ -3171,26 +3178,70 @@ footer .copyright h5 {
   justify-content: center;
   align-items: center;
 }
-.insta-feed .insta-feed-area .all-post .post .post-header .more i {
+.news-feed .news-feed-area .all-post .post .post-header .more:hover .options {
+  opacity: 1;
+  pointer-events: auto;
+  top: 1.8rem;
+}
+.news-feed .news-feed-area .all-post .post .post-header .more i {
   font-size: 1.2rem;
 }
-.insta-feed .insta-feed-area .all-post .post .post-header .more:hover {
+.news-feed .news-feed-area .all-post .post .post-header .more:hover {
   background-color: rgba(31, 31, 31, 0.07);
 }
-.insta-feed .insta-feed-area .all-post .post .post-body p {
+.news-feed .news-feed-area .all-post .post .post-header .more .options {
+  position: absolute;
+  top: 0.2rem;
+  right: -1rem;
+  width: 15.5rem;
+  padding: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: 10;
+}
+.news-feed .news-feed-area .all-post .post .post-header .more .options ul {
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(31, 31, 31, 0.1);
+}
+.news-feed .news-feed-area .all-post .post .post-header .more .options ul li {
+  border-radius: 0.3rem;
+}
+.news-feed .news-feed-area .all-post .post .post-header .more .options ul li button {
+  color: #1F1F1F;
+  padding: 0.8rem 0.5rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 0.8rem;
+}
+.news-feed .news-feed-area .all-post .post .post-header .more .options ul li button:hover {
+  background-color: rgba(31, 31, 31, 0.06);
+}
+.news-feed .news-feed-area .all-post .post .post-header .more .options ul li button i {
+  font-size: 1.1rem;
+}
+.news-feed .news-feed-area .all-post .post .post-body p {
   font-size: 0.9rem;
   color: #1F1F1F;
   margin-bottom: 0.5rem;
 }
-.insta-feed .insta-feed-area .all-post .post .post-body img {
+.news-feed .news-feed-area .all-post .post .post-body img {
   width: 100%;
   border-radius: 0.5rem;
 }
-.insta-feed .insta-feed-area .all-post .post .post-footer {
+.news-feed .news-feed-area .all-post .post .post-footer {
   margin-top: 0.5rem;
 }
-.insta-feed .insta-feed-area .all-post .post .post-footer .button-group {
-  padding: 0.5rem;
+.news-feed .news-feed-area .all-post .post .post-footer .button-group {
+  padding: 0 0.5rem;
   border-top: 1px solid rgba(31, 31, 31, 0.2);
   border-bottom: 1px solid rgba(31, 31, 31, 0.2);
   display: flex;
@@ -3198,39 +3249,335 @@ footer .copyright h5 {
   align-items: center;
   gap: 1rem;
 }
-.insta-feed .insta-feed-area .all-post .post .post-footer .button-group .left-group {
+.news-feed .news-feed-area .all-post .post .post-footer .button-group .left-group {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 1rem;
 }
-.insta-feed .insta-feed-area .all-post .post .post-footer .button-group .right-group {
+.news-feed .news-feed-area .all-post .post .post-footer .button-group .right-group {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 1rem;
 }
-.insta-feed .insta-feed-area .all-post .post .post-footer .button-group button {
+.news-feed .news-feed-area .all-post .post .post-footer .button-group button {
   font-size: 1.1rem;
   cursor: pointer;
 }
-.insta-feed .insta-feed-area .all-post .post .post-footer .counter {
+.news-feed .news-feed-area .all-post .post .post-footer .counter {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 1rem;
 }
-.insta-feed .insta-feed-area .all-post .post .post-footer .counter .likes-count p {
+.news-feed .news-feed-area .all-post .post .post-footer .counter .likes-count p {
   font-weight: 600;
 }
-.insta-feed .insta-feed-area .all-post .post .post-footer .counter .comment-report-count {
+.news-feed .news-feed-area .all-post .post .post-footer .counter .comment-report-count {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 1rem;
 }
-.insta-feed .insta-feed-area .all-post .post .post-footer .counter .comment-report-count p {
+.news-feed .news-feed-area .all-post .post .post-footer .counter .comment-report-count p {
   color: #525252;
+}
+.news-feed .news-feed-area .all-post .post .post-footer svg {
+  cursor: pointer;
+  overflow: visible;
+  width: 2.1rem;
+  height: 2.1rem;
+  transform: scale(1.2) translateY(0.1rem);
+}
+.news-feed .news-feed-area .all-post .post .post-footer svg #heart {
+  transform-origin: center;
+  animation: animateHeartOut 0.3s linear forwards;
+}
+.news-feed .news-feed-area .all-post .post .post-footer svg #main-circ {
+  transform-origin: 29.5px 29.5px;
+}
+.news-feed .news-feed-area .all-post .post .post-footer #checkbox {
+  display: none;
+}
+.news-feed .news-feed-area .all-post .post .post-footer #checkbox:checked + label svg #heart {
+  transform: scale(0.2);
+  fill: #e2264d;
+  animation: animateHeart 0.3s linear forwards 0.25s;
+}
+.news-feed .news-feed-area .all-post .post .post-footer #checkbox:checked + label svg #main-circ {
+  transition: all 2s;
+  animation: animateCircle 0.3s linear forwards;
+  opacity: 1;
+}
+.news-feed .news-feed-area .all-post .post .post-footer #checkbox:checked + label svg #grp1 {
+  opacity: 1;
+  transition: 0.1s all 0.3s;
+}
+.news-feed .news-feed-area .all-post .post .post-footer #checkbox:checked + label svg #grp1 #oval1 {
+  transform: scale(0) translate(0, -30px);
+  transform-origin: 0 0 0;
+  transition: 0.5s transform 0.3s;
+}
+.news-feed .news-feed-area .all-post .post .post-footer #checkbox:checked + label svg #grp1 #oval2 {
+  transform: scale(0) translate(10px, -50px);
+  transform-origin: 0 0 0;
+  transition: 1.5s transform 0.3s;
+}
+.news-feed .news-feed-area .all-post .post .post-footer #checkbox:checked + label svg #grp2 {
+  opacity: 1;
+  transition: 0.1s all 0.3s;
+}
+.news-feed .news-feed-area .all-post .post .post-footer #checkbox:checked + label svg #grp2 #oval1 {
+  transform: scale(0) translate(30px, -15px);
+  transform-origin: 0 0 0;
+  transition: 0.5s transform 0.3s;
+}
+.news-feed .news-feed-area .all-post .post .post-footer #checkbox:checked + label svg #grp2 #oval2 {
+  transform: scale(0) translate(60px, -15px);
+  transform-origin: 0 0 0;
+  transition: 1.5s transform 0.3s;
+}
+.news-feed .news-feed-area .all-post .post .post-footer #checkbox:checked + label svg #grp3 {
+  opacity: 1;
+  transition: 0.1s all 0.3s;
+}
+.news-feed .news-feed-area .all-post .post .post-footer #checkbox:checked + label svg #grp3 #oval1 {
+  transform: scale(0) translate(30px, 0px);
+  transform-origin: 0 0 0;
+  transition: 0.5s transform 0.3s;
+}
+.news-feed .news-feed-area .all-post .post .post-footer #checkbox:checked + label svg #grp3 #oval2 {
+  transform: scale(0) translate(60px, 10px);
+  transform-origin: 0 0 0;
+  transition: 1.5s transform 0.3s;
+}
+.news-feed .news-feed-area .all-post .post .post-footer #checkbox:checked + label svg #grp4 {
+  opacity: 1;
+  transition: 0.1s all 0.3s;
+}
+.news-feed .news-feed-area .all-post .post .post-footer #checkbox:checked + label svg #grp4 #oval1 {
+  transform: scale(0) translate(30px, 15px);
+  transform-origin: 0 0 0;
+  transition: 0.5s transform 0.3s;
+}
+.news-feed .news-feed-area .all-post .post .post-footer #checkbox:checked + label svg #grp4 #oval2 {
+  transform: scale(0) translate(40px, 50px);
+  transform-origin: 0 0 0;
+  transition: 1.5s transform 0.3s;
+}
+.news-feed .news-feed-area .all-post .post .post-footer #checkbox:checked + label svg #grp5 {
+  opacity: 1;
+  transition: 0.1s all 0.3s;
+}
+.news-feed .news-feed-area .all-post .post .post-footer #checkbox:checked + label svg #grp5 #oval1 {
+  transform: scale(0) translate(-10px, 20px);
+  transform-origin: 0 0 0;
+  transition: 0.5s transform 0.3s;
+}
+.news-feed .news-feed-area .all-post .post .post-footer #checkbox:checked + label svg #grp5 #oval2 {
+  transform: scale(0) translate(-60px, 30px);
+  transform-origin: 0 0 0;
+  transition: 1.5s transform 0.3s;
+}
+.news-feed .news-feed-area .all-post .post .post-footer #checkbox:checked + label svg #grp6 {
+  opacity: 1;
+  transition: 0.1s all 0.3s;
+}
+.news-feed .news-feed-area .all-post .post .post-footer #checkbox:checked + label svg #grp6 #oval1 {
+  transform: scale(0) translate(-30px, 0px);
+  transform-origin: 0 0 0;
+  transition: 0.5s transform 0.3s;
+}
+.news-feed .news-feed-area .all-post .post .post-footer #checkbox:checked + label svg #grp6 #oval2 {
+  transform: scale(0) translate(-60px, -5px);
+  transform-origin: 0 0 0;
+  transition: 1.5s transform 0.3s;
+}
+.news-feed .news-feed-area .all-post .post .post-footer #checkbox:checked + label svg #grp7 {
+  opacity: 1;
+  transition: 0.1s all 0.3s;
+}
+.news-feed .news-feed-area .all-post .post .post-footer #checkbox:checked + label svg #grp7 #oval1 {
+  transform: scale(0) translate(-30px, -15px);
+  transform-origin: 0 0 0;
+  transition: 0.5s transform 0.3s;
+}
+.news-feed .news-feed-area .all-post .post .post-footer #checkbox:checked + label svg #grp7 #oval2 {
+  transform: scale(0) translate(-55px, -30px);
+  transform-origin: 0 0 0;
+  transition: 1.5s transform 0.3s;
+}
+.news-feed .news-feed-area .all-post .post .post-footer #checkbox:checked + label svg #grp2 {
+  opacity: 1;
+  transition: 0.1s opacity 0.3s;
+}
+.news-feed .news-feed-area .all-post .post .post-footer #checkbox:checked + label svg #grp3 {
+  opacity: 1;
+  transition: 0.1s opacity 0.3s;
+}
+.news-feed .news-feed-area .all-post .post .post-footer #checkbox:checked + label svg #grp4 {
+  opacity: 1;
+  transition: 0.1s opacity 0.3s;
+}
+.news-feed .news-feed-area .all-post .post .post-footer #checkbox:checked + label svg #grp5 {
+  opacity: 1;
+  transition: 0.1s opacity 0.3s;
+}
+.news-feed .news-feed-area .all-post .post .post-footer #checkbox:checked + label svg #grp6 {
+  opacity: 1;
+  transition: 0.1s opacity 0.3s;
+}
+.news-feed .news-feed-area .all-post .post .post-footer #checkbox:checked + label svg #grp7 {
+  opacity: 1;
+  transition: 0.1s opacity 0.3s;
+}
+@keyframes animateCircle {
+  40% {
+    transform: scale(10);
+    opacity: 1;
+    fill: #dd4688;
+  }
+  55% {
+    transform: scale(11);
+    opacity: 1;
+    fill: #d46abf;
+  }
+  65% {
+    transform: scale(12);
+    opacity: 1;
+    fill: #cc8ef5;
+  }
+  75% {
+    transform: scale(13);
+    opacity: 1;
+    fill: transparent;
+    stroke: #cc8ef5;
+    stroke-width: 0.5;
+  }
+  85% {
+    transform: scale(17);
+    opacity: 1;
+    fill: transparent;
+    stroke: #cc8ef5;
+    stroke-width: 0.2;
+  }
+  95% {
+    transform: scale(18);
+    opacity: 1;
+    fill: transparent;
+    stroke: #cc8ef5;
+    stroke-width: 0.1;
+  }
+  100% {
+    transform: scale(19);
+    opacity: 1;
+    fill: transparent;
+    stroke: #cc8ef5;
+    stroke-width: 0;
+  }
+}
+@keyframes animateHeart {
+  0% {
+    transform: scale(0.2);
+  }
+  40% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes animateHeartOut {
+  0% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* main.scss */
+#calendar {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  font-family: "Arial, sans-serif";
+}
+
+.fc-toolbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #744bb6;
+  color: #fff;
+  border-radius: 10px 10px 0 0;
+  padding: 15px;
+}
+
+.fc-button-primary {
+  background-color: #a00000;
+  border-color: #a00000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.fc-button-primary:not(:disabled).fc-button-active, .fc-button-primary:not(:disabled):active, .fc-button-primary:not(:disabled):focus {
+  background-color: #6d0000;
+  border-color: #6d0000;
+}
+.fc-button-primary:hover {
+  background-color: #6d0000;
+}
+
+.fc-daygrid {
+  border: none;
+}
+.fc-daygrid-day {
+  border: none;
+  transition: background-color 0.3s ease;
+}
+.fc-daygrid.fc-day-today {
+  background-color: #ac94d3;
+}
+.fc-daygrid:hover {
+  background-color: white;
+}
+.fc-daygrid-day-number {
+  color: #a00000;
+  font-weight: bold;
+}
+
+.fc-event {
+  background-color: #d30000;
+  border: none;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.fc-event:hover {
+  background-color: #ff0707;
+  transform: scale(1.05);
+}
+
+.fc-popover {
+  background-color: #f9f9f9;
+  border: none;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.fc-popover-header {
+  background-color: #744bb6;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+}
+.fc-popover-body {
+  padding: 10px;
 }
 
 @media only screen and (max-width: 1200px) {

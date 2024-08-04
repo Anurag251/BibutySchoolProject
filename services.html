@@ -10,14 +10,14 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
 
+    <!-- fancybox -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+
     <!-- swiper -->
     <link rel="stylesheet" href="./styles/lib/swiper.min.css" />
-
-    <!-- FullCalendar CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css"
-      rel="stylesheet"
-    />
 
     <!-- css -->
     <link rel="stylesheet" href="./styles/main.css" />
@@ -274,19 +274,19 @@
       />
       <div class="page-title">
         <!-- Breadcrumb -->
-        <h5>Home . Calendar</h5>
+        <h5>Home . Food Menu</h5>
 
         <!-- page title -->
-        <h2>Calendar</h2>
+        <h2>Food Menu</h2>
       </div>
     </div>
     <!-- page title end -->
 
-    <section class="event-calendar-section">
-      <div class="wrapper">
-        <div id="calendar"></div>
-      </div>
+    <!-- Services start -->
+    <section class="services-section">
+      <div class="wrapper"></div>
     </section>
+    <!-- Services end -->
 
     <!-- Footer start -->
     <footer>
@@ -423,35 +423,5 @@
 
     <!-- js -->
     <script src="./js/scripts.js"></script>
-
-    <!-- FullCalendar JS -->
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js"></script>
-
-    <!-- Initialize FullCalendar -->
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var calendarEl = document.getElementById("calendar");
-
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: "dayGridMonth",
-          events: [
-            // Example events
-            {
-              title: "Event 1",
-              paragraph: "asdasdasd as dasd asd",
-              start: "2024-08-01",
-              end: "2024-08-02",
-            },
-            {
-              title: "Event 2",
-              start: "2024-08-05",
-            },
-          ],
-        });
-
-        calendar.render();
-      });
-    </script>
   </body>
 </html>

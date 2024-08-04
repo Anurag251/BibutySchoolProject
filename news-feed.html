@@ -24,7 +24,7 @@
   <body>
     <div id="colorCode" primaryColor="#A00000" secondaryColor="#744BB6"></div>
 
-    <div class="insta-feed">
+    <div class="news-feed">
       <div class="side-nav active">
         <div class="side-nav-inner">
           <button class="side-nav-close" role="close-menu" title="Close Menu">
@@ -130,34 +130,36 @@
         </div>
       </div>
 
-      <div class="insta-feed-area">
-        <div class="insta-feed-left">
-          <div class="post-button">
-            <div class="placeholder">
-              <img src="./assets/images/blog-1.jpeg" alt="" />
+      <div class="news-feed-area">
+        <div class="news-feed-left">
+          <div class="post-button-area">
+            <div class="post-button">
+              <div class="placeholder">
+                <img src="./assets/images/blog-1.jpeg" alt="" />
 
-              <p>What's New?</p>
+                <p>What's New?</p>
+              </div>
+
+              <ul class="button-group">
+                <li>
+                  <button>
+                    <i class="fa-regular fa-face-smile"></i>
+                  </button>
+                </li>
+
+                <li>
+                  <button>
+                    <i class="fas fa-image"></i>
+                  </button>
+                </li>
+
+                <li>
+                  <button>
+                    <i class="fas fa-ellipsis-h"></i>
+                  </button>
+                </li>
+              </ul>
             </div>
-
-            <ul class="button-group">
-              <li>
-                <button>
-                  <i class="fa-regular fa-face-smile"></i>
-                </button>
-              </li>
-
-              <li>
-                <button>
-                  <i class="fas fa-image"></i>
-                </button>
-              </li>
-
-              <li>
-                <button>
-                  <i class="fas fa-ellipsis-h"></i>
-                </button>
-              </li>
-            </ul>
           </div>
 
           <div class="all-post">
@@ -174,8 +176,63 @@
                   </div>
                 </div>
 
-                <div class="more">
-                  <i class="fas fa-ellipsis-v"></i>
+                <div class="more-options">
+                  <div class="more">
+                    <i class="fas fa-ellipsis-v"></i>
+
+                    <div class="options">
+                      <ul>
+                        <li>
+                          <a href="#">
+                            <button>
+                              <i class="fa-solid fa-circle-user"></i>
+                              View Profile
+                            </button>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <button>
+                              <i class="fa-solid fa-bell-slash"></i>
+
+                              Mute Notifications
+                            </button>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <button>
+                              <i class="fa-solid fa-user-minus"></i>
+
+                              Block
+                            </button>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <button>
+                              <i class="fas fa-eye-slash"></i>
+
+                              Hide Post
+                            </button>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <button>
+                              <i class="fa-solid fa-triangle-exclamation"></i>
+
+                              Report
+                            </button>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -187,16 +244,169 @@
                 </p>
 
                 <div class="post-image">
-                  <img src="./assets/images/blog-1.jpeg" alt="post image" />
+                  <a
+                    href="./assets/images/blog-1.jpeg"
+                    data-fancybox="gallery"
+                    data-caption="image name"
+                    id="galleryImage"
+                  >
+                    <img src="./assets/images/blog-1.jpeg" alt="post image" />
+                  </a>
                 </div>
               </div>
 
               <div class="post-footer">
                 <div class="button-group">
                   <div class="left-group">
-                    <button class="like">
-                      <i class="fa-regular fa-heart"></i>
-                    </button>
+                    <input type="checkbox" id="checkbox" />
+
+                    <label for="checkbox">
+                      <svg
+                        id="heart-svg"
+                        viewBox="467 392 58 57"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g
+                          id="Group"
+                          fill="none"
+                          fill-rule="evenodd"
+                          transform="translate(467 392)"
+                        >
+                          <path
+                            d="M29.144 20.773c-.063-.13-4.227-8.67-11.44-2.59C7.63 28.795 28.94 43.256 29.143 43.394c.204-.138 21.513-14.6 11.44-25.213-7.214-6.08-11.377 2.46-11.44 2.59z"
+                            id="heart"
+                            fill="#AAB8C2"
+                          />
+                          <circle
+                            id="main-circ"
+                            fill="#E2264D"
+                            opacity="0"
+                            cx="29.5"
+                            cy="29.5"
+                            r="1.5"
+                          />
+
+                          <g id="grp7" opacity="0" transform="translate(7 6)">
+                            <circle
+                              id="oval1"
+                              fill="#9CD8C3"
+                              cx="2"
+                              cy="6"
+                              r="2"
+                            />
+                            <circle
+                              id="oval2"
+                              fill="#8CE8C3"
+                              cx="5"
+                              cy="2"
+                              r="2"
+                            />
+                          </g>
+
+                          <g id="grp6" opacity="0" transform="translate(0 28)">
+                            <circle
+                              id="oval1"
+                              fill="#CC8EF5"
+                              cx="2"
+                              cy="7"
+                              r="2"
+                            />
+                            <circle
+                              id="oval2"
+                              fill="#91D2FA"
+                              cx="3"
+                              cy="2"
+                              r="2"
+                            />
+                          </g>
+
+                          <g id="grp3" opacity="0" transform="translate(52 28)">
+                            <circle
+                              id="oval2"
+                              fill="#9CD8C3"
+                              cx="2"
+                              cy="7"
+                              r="2"
+                            />
+                            <circle
+                              id="oval1"
+                              fill="#8CE8C3"
+                              cx="4"
+                              cy="2"
+                              r="2"
+                            />
+                          </g>
+
+                          <g id="grp2" opacity="0" transform="translate(44 6)">
+                            <circle
+                              id="oval2"
+                              fill="#CC8EF5"
+                              cx="5"
+                              cy="6"
+                              r="2"
+                            />
+                            <circle
+                              id="oval1"
+                              fill="#CC8EF5"
+                              cx="2"
+                              cy="2"
+                              r="2"
+                            />
+                          </g>
+
+                          <g id="grp5" opacity="0" transform="translate(14 50)">
+                            <circle
+                              id="oval1"
+                              fill="#91D2FA"
+                              cx="6"
+                              cy="5"
+                              r="2"
+                            />
+                            <circle
+                              id="oval2"
+                              fill="#91D2FA"
+                              cx="2"
+                              cy="2"
+                              r="2"
+                            />
+                          </g>
+
+                          <g id="grp4" opacity="0" transform="translate(35 50)">
+                            <circle
+                              id="oval1"
+                              fill="#F48EA7"
+                              cx="6"
+                              cy="5"
+                              r="2"
+                            />
+                            <circle
+                              id="oval2"
+                              fill="#F48EA7"
+                              cx="2"
+                              cy="2"
+                              r="2"
+                            />
+                          </g>
+
+                          <g id="grp1" opacity="0" transform="translate(24)">
+                            <circle
+                              id="oval1"
+                              fill="#9FC7FA"
+                              cx="2.5"
+                              cy="3"
+                              r="2"
+                            />
+                            <circle
+                              id="oval2"
+                              fill="#9FC7FA"
+                              cx="7.5"
+                              cy="2"
+                              r="2"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </label>
 
                     <button class="comment">
                       <i class="fa-regular fa-comment"></i>
@@ -233,7 +443,7 @@
           </div>
         </div>
 
-        <!-- <div class="insta-feed-right">
+        <!-- <div class="news-feed-right">
           <div class="upcoming-events">
             <h3>Upcoming Events</h3>
 
@@ -265,6 +475,10 @@
 
     <script>
       Fancybox.bind("[data-fancybox]");
+
+      let b = document.querySelector("button");
+      setTimeout(() => b.focus(), 100);
+      setTimeout(() => b.blur(), 1000);
     </script>
   </body>
 </html>
