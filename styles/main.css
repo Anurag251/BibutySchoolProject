@@ -2543,108 +2543,103 @@ footer .copyright h5 {
   transform: scale(1.2);
 }
 
-.food-menu-section .food-menu-categories {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px dashed rgba(31, 31, 31, 0.3);
-  border-left: none;
-  border-right: none;
-  gap: 3rem;
-  flex-wrap: wrap;
-  padding: 1.2rem 0;
-}
-.food-menu-section .food-menu-categories li {
-  padding: 0.1rem 0;
-  cursor: pointer;
-  position: relative;
-  color: rgba(31, 31, 31, 0.6);
-}
-.food-menu-section .food-menu-categories li:hover {
-  color: #1F1F1F;
-}
-.food-menu-section .food-menu-categories li.active {
-  color: #1F1F1F;
-}
-.food-menu-section .food-menu-categories li.active::before, .food-menu-section .food-menu-categories li.active::after {
-  width: 100%;
-}
-.food-menu-section .food-menu-categories li::before, .food-menu-section .food-menu-categories li::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 1.5px;
-  width: 0;
-  background-color: var(--pri);
-  transition: 0.4s;
-}
-.food-menu-section .food-menu-categories li::after {
-  bottom: -0.3rem;
-}
-.food-menu-section .food-menu-list {
+/*********************      services      ***********************/
+.services .list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
-  grid-column-gap: 5rem;
-  margin: 2rem 0;
-  position: relative;
 }
-.food-menu-section .food-menu-list::before {
-  content: "";
+.services .list .item {
+  margin-top: 6.5rem;
+  position: relative;
+  background-color: #FFFFFF;
+  border-radius: 0.4rem;
+  box-shadow: 0 0 10px rgba(31, 31, 31, 0.13);
+  padding: 1rem;
+  padding-top: 6.5rem;
+}
+.services .list .item:hover .image .img {
+  transform: translateX(0) scale(1);
+}
+.services .list .item .image {
   position: absolute;
   left: 50%;
   top: 0;
-  transform: translateX(-50%);
-  height: 100%;
-  width: 1px;
-  background-color: rgba(31, 31, 31, 0.3);
-}
-.food-menu-section .food-menu-list .food-menu-item {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  align-items: flex-start;
-  gap: 0.7rem;
-  padding: 0.5rem;
-  border-radius: 0.7rem;
-}
-.food-menu-section .food-menu-list .food-menu-item:hover {
-  background-color: rgba(var(--prirgb), 0.06);
-}
-.food-menu-section .food-menu-list .food-menu-item .image {
-  height: 6rem;
-  max-width: 6rem;
-  width: 100%;
-  flex: 6rem;
-  overflow: hidden;
+  transform: translate(-50%, -50%);
+  height: 11rem;
+  width: 92%;
   border-radius: 0.4rem;
+  overflow: hidden;
 }
-.food-menu-section .food-menu-list .food-menu-item .image img {
+.services .list .item .image .img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: translateX(-20px) scale(1.2);
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
 }
-.food-menu-section .food-menu-list .food-menu-item .content {
-  max-width: calc(100% - 8rem);
-  width: 100%;
-  padding: 0.3rem;
-}
-.food-menu-section .food-menu-list .food-menu-item .content .item-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.3rem;
-}
-.food-menu-section .food-menu-list .food-menu-item .content .item-head h3 {
-  font-size: 1.1rem;
-  font-weight: 500;
-}
-.food-menu-section .food-menu-list .food-menu-item .content .item-head h5 {
+.services .list .item .details .name {
   font-size: 1rem;
-  font-weight: 500;
-  color: var(--pri);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.services .list .item .details p {
+  font-size: 0.8rem;
+  line-height: 140%;
+  color: #555555;
+}
+.services h1 {
+  font-size: 30px;
+  margin: 4rem 0 1rem;
+}
+.services p {
+  font-size: 18px;
+  line-height: 2rem;
+  color: #555555;
+}
+.services .group {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-gap: 20px;
+}
+.services .group .image {
+  width: 100%;
+}
+.services .group .image img {
+  width: 90%;
+}
+.services .advisors .item, .services .executive-team .item {
+  margin-bottom: 3rem;
+}
+.services .advisors .item .image, .services .executive-team .item .image {
+  max-width: 200px;
+  width: 100%;
+}
+.services .advisors .item .image img, .services .executive-team .item .image img {
+  width: 100%;
+}
+.services .advisors .item .info, .services .executive-team .item .info {
+  margin-top: 1rem;
+}
+.services .advisors .item .info .name, .services .executive-team .item .info .name {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.services .advisors .item .info ul, .services .executive-team .item .info ul {
+  margin: 2rem 0;
+}
+.services .advisors .item .info ul.num li, .services .executive-team .item .info ul.num li {
+  list-style: decimal;
+}
+.services .advisors .item .info ul li, .services .executive-team .item .info ul li {
+  font-size: 18px;
+  line-height: 2rem;
+  color: #555555;
+  list-style: disc;
+  margin-left: 2rem;
 }
 
 .admission-section .title-part {
@@ -3734,6 +3729,9 @@ footer .copyright h5 {
   .wrapper {
     max-width: 900px;
   }
+  .services .list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 @media only screen and (max-width: 900px) {
   .wrapper {
@@ -3837,6 +3835,9 @@ footer .copyright h5 {
 @media only screen and (max-width: 800px) {
   .wrapper {
     max-width: 600px;
+  }
+  .services .list {
+    grid-template-columns: 1fr 1fr;
   }
   .banner-section .slide-button-group .slide-button-next, .banner-section .slide-button-group .slide-button-prev {
     height: 2.5rem;
@@ -4448,6 +4449,9 @@ footer .copyright h5 {
   .custom-button {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
+  }
+  .services .list {
+    grid-template-columns: 1fr;
   }
   .principal-section .inner-principal .about-principal h2 {
     font-size: 2rem;

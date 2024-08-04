@@ -1,0 +1,100 @@
+@use '../helper/_variables' as *
+@use '../helper/_mixin' as *
+@use '../layout/_layout' as *
+
+/*********************      services      ***********************/
+.services
+  .list
+    @include grid($columns: 1fr 1fr 1fr 1fr)
+
+    .item
+      margin-top: 6.5rem
+      position: relative
+      background-color: $light
+      border-radius: .4rem
+      box-shadow: 0 0 10px rgba($dark, .13)
+      padding: 1rem
+      padding-top: 6.5rem
+
+      &:hover
+        .image
+          .img
+            transform: translateX(0) scale(1)
+
+      .image
+        position: absolute
+        left: 50%
+        top: 0
+        transform: translate(-50%, -50%)
+        height: 11rem
+        width: 92%
+        border-radius: .4rem
+        overflow: hidden
+
+        .img
+          height: 100%
+          width: 100%
+          @include bgImage()
+          transform: translateX(-20px) scale(1.2)
+          @include trans()
+
+      .details
+        .name
+          font-size: 1rem
+          font-weight: 600
+          margin-bottom: .5rem
+
+        p
+          font-size: .8rem
+          line-height: 140%
+          color: $para
+
+  h1
+    font-size: 30px
+    margin: 4rem 0 1rem
+
+  p
+    font-size: 18px
+    line-height: 2rem
+    color: $para
+
+  .group
+    @include grid($columns: 1fr 5fr)
+
+    .image
+      width: 100%
+
+      img
+        width: 90%
+
+  .advisors, .executive-team
+    .item
+      margin-bottom: 3rem
+
+      .image
+        max-width: 200px
+        width: 100%
+
+        img
+          width: 100%
+
+      .info
+        margin-top: 1rem
+        .name
+          font-size: 22px
+          font-weight: 700
+          margin-bottom: .5rem
+
+        ul
+          margin: 2rem 0
+
+          &.num
+            li
+              list-style: decimal
+
+          li
+            font-size: 18px
+            line-height: 2rem
+            color: $para
+            list-style: disc
+            margin-left: 2rem
