@@ -293,6 +293,14 @@
             .item
               border-bottom: none
 
+  .notice-section
+    .notice-area
+      grid-template-columns: 1fr 1fr
+
+  .partners-section
+    .partners-area
+      grid-template-columns: 1fr 1fr
+
 @media only screen and ( max-width:  800px)
   .wrapper
     max-width: 600px
@@ -994,6 +1002,34 @@
       .custom-input
         font-size: .9rem
 
+  .notice-section
+    .notice-area
+      .item
+        height: 3rem
+        .date
+          font-size: .8rem
+
+          span
+            font-size: 1.2rem
+
+        .name
+          max-width: calc( 100% - 3rem )
+          font-size: .7rem
+
+  .partners-section
+    .partners-area
+      .item
+        height: 13rem
+
+        .partners-logo
+          height: 4rem
+
+        .name
+          font-size: 1.1rem
+
+        p
+          font-size: .7rem
+
 @media only screen and ( max-width:  500px)
   .custom-button
     padding: .5rem 1rem
@@ -1096,6 +1132,10 @@
         grid-gap: .5rem
         a
           height: 8rem
+
+  .notice-section
+    .notice-area
+      grid-template-columns: 1fr
 
 @media only screen and ( max-width:  440px)
   .page-title-section
@@ -1499,6 +1539,10 @@
                 .date
                   font-size: .68rem
                   gap: .3rem
+
+  .partners-section
+    .partners-area
+      grid-template-columns: 1fr
 
 @media only screen and ( max-width:  380px)
   .principal-section
